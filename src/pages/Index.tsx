@@ -115,7 +115,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-32 md:py-44 px-6 bg-muted/50">
+    <section id="section-3" className="py-32 md:py-44 px-6 bg-muted/50">
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold mb-6">
