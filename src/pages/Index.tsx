@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   const handleScrollToSection3 = () => {
@@ -13,14 +12,16 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-end overflow-hidden pb-24 md:pb-32">
       <div className="absolute inset-0">
-        <img
-          src={heroBg}
-          alt="Luxury abstract background"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
-          width={1920}
-          height={1080}
-        />
-        <div className="absolute inset-0 bg-foreground/65" />
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-foreground/40" />
       </div>
       <div className="relative z-10 px-6 md:px-16 lg:px-24 w-full max-w-7xl">
         <motion.h1
