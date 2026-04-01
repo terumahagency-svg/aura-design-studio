@@ -499,7 +499,7 @@ const Index = () => (
     <MissingPieceSection />
     <ServicesSection />
     <CTASection />
-    <Footer />
+    <ContactFooter />
     <WhatsAppFAB targetSectionId="about-terumah" />
   </main>
 );
