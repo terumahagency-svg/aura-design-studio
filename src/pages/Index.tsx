@@ -235,7 +235,7 @@ const MissingPieceSection = () => {
                     {item.description}
                   </p>
 
-                  <span className={`inline-flex items-center gap-2 text-${item.accent} font-body text-xs tracking-[0.2em] uppercase font-semibold`}>
+                  <span className={`inline-flex items-center gap-2 font-body text-xs tracking-[0.2em] uppercase font-semibold px-5 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-${item.accent} shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)] hover:bg-white/10 hover:border-white/30 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),0_4px_16px_rgba(0,0,0,0.2)] transition-all duration-300`}>
                     Learn More
                     <motion.span
                       className="inline-block"
