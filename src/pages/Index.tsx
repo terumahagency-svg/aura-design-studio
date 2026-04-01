@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   const handleScrollToSection3 = () => {
