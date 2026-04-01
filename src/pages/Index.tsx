@@ -438,7 +438,6 @@ const Index = () => (
     <AboutSection />
     <MissingPieceSection />
     <ContactFooter />
-    <ContactFooter />
     <WhatsAppFAB targetSectionId="about-terumah" />
   </main>
 );
