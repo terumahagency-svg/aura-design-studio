@@ -10,7 +10,7 @@ interface WhatsAppFABProps {
 
 const WhatsAppFAB = ({
   targetSectionId,
-  phoneNumber = "",
+  phoneNumber = "254723579077",
   message = "Hi, I'd like to learn more about Terumah Agency!",
 }: WhatsAppFABProps) => {
   const [visible, setVisible] = useState(false);
