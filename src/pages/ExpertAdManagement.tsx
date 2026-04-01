@@ -69,13 +69,13 @@ const ExpertAdManagement = () => (
             <div className="w-14 h-14 rounded-sm bg-deep-blue/10 flex items-center justify-center">
               <Target className="w-6 h-6 text-deep-blue" />
             </div>
-            <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">Terumah Targeted</p>
+          <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">Terumah Targeted</p>
           </div>
           <h1 className="text-4xl md:text-6xl font-heading font-light leading-[1.1] mb-8">
-            Expert Ad <span className="italic text-secondary">Management</span>
+            Terumah <span className="italic text-secondary">Targeted</span>
           </h1>
           <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl">
-            Your outsourced ad department. We manage your campaigns end-to-end — strategy, creative, optimization, and reporting — so every shilling works harder for your business.
+            Terumah Targeted functions as your outsourced ad department, providing the professional management and creative guidance needed to win on social and search.
           </p>
         </AnimatedSection>
       </div>
