@@ -226,10 +226,11 @@ const Footer = () => (
 const Index = () => (
   <main className="min-h-screen">
     <HeroSection />
-    <PhilosophySection />
+    <AboutSection />
     <ServicesSection />
     <CTASection />
     <Footer />
+    <WhatsAppFAB targetSectionId="about-terumah" />
   </main>
 );
 
