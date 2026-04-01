@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
+import { Target, Camera, Share2, Play } from "lucide-react";
 
 const HeroSection = () => {
   const handleScrollToSection3 = () => {
