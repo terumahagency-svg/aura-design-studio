@@ -178,8 +178,8 @@ const MissingPieceSection = () => {
       accent: "secondary",
     },
     {
-      title: "Automated Social Media Sales Flow",
-      description: "Set up systems that convert followers into paying customers on autopilot.",
+      title: "Grow With Social Media",
+      description: "Support your sales team with high-quality leads through professional scripting and targeted social media campaigns.",
       icon: Share2,
       path: "/social-media-sales-flow",
       accent: "light-blue",
