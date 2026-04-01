@@ -254,67 +254,6 @@ const MissingPieceSection = () => {
   );
 };
 
-const ServicesSection = () => {
-  const services = [
-    { number: "01", title: "Strategy", description: "Defining the vision and roadmap for meaningful outcomes." },
-    { number: "02", title: "Design", description: "Crafting visual experiences that captivate and communicate." },
-    { number: "03", title: "Development", description: "Building with precision, performance, and purpose." },
-  ];
-
-  return (
-    <section className="py-32 md:py-44 px-6">
-      <div className="max-w-6xl mx-auto">
-        <AnimatedSection>
-          <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold mb-6">
-            What We Do
-          </p>
-          <h2 className="text-4xl md:text-5xl font-heading font-light leading-[1.15] mb-20">
-            Core Disciplines
-          </h2>
-        </AnimatedSection>
-        <div className="space-y-0">
-          {services.map((service, i) => (
-            <AnimatedSection key={service.number} delay={i * 0.15}>
-              <div className="group border-t border-border py-12 md:py-16 flex flex-col md:flex-row md:items-center gap-6 md:gap-16 cursor-pointer transition-all duration-500 hover:pl-4">
-                <span className="text-secondary font-body text-sm tracking-widest">
-                  {service.number}
-                </span>
-                <h3 className="text-3xl md:text-4xl font-heading font-light group-hover:text-secondary transition-colors duration-500">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground font-body text-sm md:ml-auto md:max-w-xs leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            </AnimatedSection>
-          ))}
-          <div className="border-t border-border" />
-        </div>
-      </div>
-    </section>
-  );
-};
-
-const CTASection = () => (
-  <section className="py-32 md:py-44 px-6">
-    <div className="max-w-3xl mx-auto text-center">
-      <AnimatedSection>
-        <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-light leading-[1.1] mb-8">
-          Ready to create something{" "}
-          <span className="italic text-secondary">extraordinary</span>?
-        </h2>
-        <p className="text-muted-foreground font-body text-lg mb-12 max-w-lg mx-auto leading-relaxed">
-          Let's bring your vision to life with purpose and precision.
-        </p>
-        <Button variant="outline-dark" size="lg" className="px-12 py-6">
-          Get in Touch
-        </Button>
-      </AnimatedSection>
-    </div>
-  </section>
-);
-
-const ContactFooter = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     fullName: "",
