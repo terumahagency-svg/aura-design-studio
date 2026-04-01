@@ -1,10 +1,14 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
-import { Target, Camera, Share2, Play } from "lucide-react";
+import { Target, Camera, Share2, Play, Send } from "lucide-react";
 
 const HeroSection = () => {
   const handleScrollToSection3 = () => {
