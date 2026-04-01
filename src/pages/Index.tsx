@@ -73,37 +73,80 @@ const HeroSection = () => {
   );
 };
 
-const PhilosophySection = () => (
-  <section className="py-32 md:py-44 px-6">
+const AboutSection = () => (
+  <section id="about-terumah" className="py-32 md:py-44 px-6">
     <div className="max-w-6xl mx-auto">
-      <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
-        <AnimatedSection>
-          <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold mb-6">
-            Our Philosophy
-          </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-light leading-[1.15] mb-8">
-            Less, but{" "}
-            <span className="italic text-secondary">better</span>
-          </h2>
-          <div className="w-12 h-px bg-secondary mb-8" />
-          <p className="text-muted-foreground font-body text-base leading-[1.8] mb-6">
-            We believe in the power of restraint. Every element serves a purpose, every space breathes with intention. This is design stripped to its essence — nothing more, nothing less.
-          </p>
-          <p className="text-muted-foreground font-body text-base leading-[1.8]">
-            Our approach honours the beauty of simplicity while delivering experiences that resonate on a deeper level.
-          </p>
-        </AnimatedSection>
-        <AnimatedSection delay={0.2}>
-          <div className="aspect-[4/5] bg-muted relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-foreground/10" />
-            <div className="absolute bottom-8 left-8 right-8">
-              <div className="w-8 h-px bg-secondary mb-4" />
-              <p className="text-muted-foreground font-body text-sm tracking-wide">
-                Detail-oriented design
+      <div className="grid md:grid-cols-12 gap-16 md:gap-12">
+        {/* Left column — headline + Hebrew word */}
+        <div className="md:col-span-5">
+          <AnimatedSection>
+            <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold mb-6">
+              About Us
+            </p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-light leading-[1.1] mb-8">
+              About{" "}
+              <span className="italic text-secondary">Terumah</span>
+              <br />
+              Agency
+            </h2>
+            <div className="w-12 h-px bg-secondary mb-10" />
+
+            {/* Hebrew highlight card */}
+            <div className="border border-border p-8 relative">
+              <p className="text-secondary tracking-[0.2em] uppercase text-[10px] font-body font-semibold mb-4">
+                Did You Know?
               </p>
+              <p className="font-heading text-3xl md:text-4xl text-foreground/90 mb-1">
+                תְּרוּמָה
+              </p>
+              <p className="text-muted-foreground font-body text-sm leading-relaxed">
+                <span className="text-foreground font-medium">Terumah</span> is a Hebrew word meaning{" "}
+                <span className="text-secondary font-medium">"offering"</span> or{" "}
+                <span className="text-secondary font-medium">"gift."</span>
+              </p>
+              <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-secondary opacity-30" />
             </div>
-          </div>
-        </AnimatedSection>
+          </AnimatedSection>
+        </div>
+
+        {/* Right column — body text */}
+        <div className="md:col-span-7 md:pt-20">
+          <AnimatedSection delay={0.15}>
+            <p className="text-foreground font-body text-base md:text-lg leading-[1.9] mb-8">
+              For us, it represents our commitment to giving our best work as an offering of service to our clients and our Creator.
+            </p>
+            <p className="text-muted-foreground font-body text-base leading-[1.9] mb-8">
+              Founded on Christian values of integrity, stewardship, and excellence, we don't just "run ads."
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.3}>
+            <div className="grid sm:grid-cols-2 gap-6 mb-10">
+              <div className="border-l-2 border-deep-blue pl-6 py-2">
+                <p className="font-heading text-xl md:text-2xl text-foreground mb-2">Terumah Targeted</p>
+                <p className="text-muted-foreground font-body text-sm leading-relaxed">
+                  Your outsourced ad department
+                </p>
+              </div>
+              <div className="border-l-2 border-light-blue pl-6 py-2">
+                <p className="font-heading text-xl md:text-2xl text-foreground mb-2">Almasi</p>
+                <p className="text-muted-foreground font-body text-sm leading-relaxed">
+                  Our high-converting video ads
+                </p>
+              </div>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.4}>
+            <p className="text-muted-foreground font-body text-base leading-[1.9] mb-6">
+              Whether it's through Terumah Targeted or Almasi, we treat your marketing budget as a{" "}
+              <span className="text-secondary font-medium">sacred trust</span>.
+            </p>
+            <p className="text-foreground font-body text-base md:text-lg leading-[1.9] font-medium">
+              We solve the "leaky bucket" problem by combining data-driven strategy with professional-grade storytelling to ensure your message reaches the right hearts and minds.
+            </p>
+          </AnimatedSection>
+        </div>
       </div>
     </div>
   </section>
