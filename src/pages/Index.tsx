@@ -325,6 +325,7 @@ const Index = () => (
   <main className="min-h-screen">
     <HeroSection />
     <AboutSection />
+    <MissingPieceSection />
     <ServicesSection />
     <CTASection />
     <Footer />
