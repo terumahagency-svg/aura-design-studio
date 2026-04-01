@@ -1,59 +1,75 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import AnimatedCounter from "@/components/AnimatedCounter";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const HeroSection = () => (
-  <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <div className="absolute inset-0">
-      <img
-        src={heroBg}
-        alt="Luxury abstract background"
-        className="w-full h-full object-cover"
-        width={1920}
-        height={1080}
-      />
-      <div className="absolute inset-0 bg-foreground/60" />
-    </div>
-    <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-secondary tracking-[0.3em] uppercase text-sm font-body font-medium mb-6"
-      >
-        Welcome
-      </motion.p>
-      <motion.h1
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        className="text-5xl md:text-7xl lg:text-8xl font-heading font-light text-primary-foreground leading-[1.1] mb-8"
-      >
-        Crafted with
-        <br />
-        <span className="italic text-secondary">intention</span>
-      </motion.h1>
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-        className="text-primary-foreground/70 font-body text-lg md:text-xl max-w-xl mx-auto mb-12 font-light leading-relaxed"
-      >
-        Where timeless elegance meets modern sensibility. Every detail, purposefully considered.
-      </motion.p>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 1.1 }}
-      >
-        <Button variant="premium" size="lg" className="px-12 py-6">
-          Discover More
-        </Button>
-      </motion.div>
-    </div>
-  </section>
-);
+const HeroSection = () => {
+  const handleScrollToSection3 = () => {
+    const el = document.getElementById("section-3");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <section className="relative min-h-screen flex items-end overflow-hidden pb-24 md:pb-32">
+      <div className="absolute inset-0">
+        <img
+          src={heroBg}
+          alt="Luxury abstract background"
+          className="w-full h-full object-cover"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute inset-0 bg-foreground/65" />
+      </div>
+      <div className="relative z-10 px-6 md:px-16 lg:px-24 w-full max-w-7xl">
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-semibold text-primary-foreground leading-[1.05] tracking-tight mb-12 max-w-4xl"
+        >
+          READY TO
+          <br />
+          TRANSFORM
+          <br />
+          YOUR <span className="italic text-secondary font-light">BUSINESS</span>?
+        </motion.h1>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="flex flex-col sm:flex-row sm:items-end gap-10 sm:gap-16"
+        >
+          <div>
+            <p className="text-6xl md:text-7xl lg:text-8xl font-heading font-bold text-secondary leading-none mb-2">
+              <AnimatedCounter target={105000} duration={2.8} />
+            </p>
+            <p className="text-primary-foreground/70 font-body text-sm md:text-base tracking-[0.15em] uppercase font-medium">
+              KSH. 100,000+ Revenue Generated
+            </p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+          >
+            <Button
+              variant="premium"
+              size="lg"
+              className="px-12 py-6"
+              onClick={handleScrollToSection3}
+            >
+              SHOW ME HOW
+            </Button>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
 
 const PhilosophySection = () => (
   <section className="py-32 md:py-44 px-6">
