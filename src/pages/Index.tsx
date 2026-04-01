@@ -254,6 +254,7 @@ const MissingPieceSection = () => {
   );
 };
 
+const ContactFooter = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     fullName: "",
