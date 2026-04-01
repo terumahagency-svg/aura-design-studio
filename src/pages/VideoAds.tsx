@@ -1,7 +1,53 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import PricingSection from "@/components/PricingSection";
 import { ArrowLeft, Play } from "lucide-react";
+
+const tiers = [
+  {
+    name: "Core",
+    tagline: "One high-impact video ad",
+    price: "KSH 50,000",
+    accent: "secondary",
+    features: [
+      "1 video ad (up to 30 seconds)",
+      "Scriptwriting & storyboarding",
+      "Professional filming (half day)",
+      "Post-production & editing",
+      "Delivery in 10 business days",
+      "1 round of revisions",
+    ],
+  },
+  {
+    name: "Pro",
+    tagline: "A campaign-ready video suite",
+    price: "KSH 100,000",
+    accent: "secondary",
+    highlighted: true,
+    features: [
+      "3 video ads (15–60 sec each)",
+      "Full creative direction & scripting",
+      "Full-day professional shoot",
+      "Motion graphics & sound design",
+      "Delivery in 7 business days",
+      "2 rounds of revisions",
+    ],
+  },
+  {
+    name: "Elite",
+    tagline: "End-to-end video ad engine",
+    price: "KSH 200,000",
+    accent: "secondary",
+    features: [
+      "5+ video ads, multiple formats",
+      "Cinematic production & direction",
+      "Multi-day / multi-location shoots",
+      "UGC-style + polished versions",
+      "Platform-optimized cuts (Reels, Stories, YouTube)",
+      "Priority delivery & unlimited revisions",
+    ],
+  },
+];
 
 const VideoAds = () => (
   <main className="min-h-screen">
@@ -20,17 +66,14 @@ const VideoAds = () => (
           <h1 className="text-4xl md:text-6xl font-heading font-light leading-[1.1] mb-8">
             High-Converting <span className="italic text-secondary">Video Ads</span>
           </h1>
-          <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl mb-12">
+          <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl">
             Cinematic, scroll-stopping video ads engineered to capture attention and drive action. From concept to final cut, we craft stories that sell.
           </p>
-          <Button variant="premium" size="lg" className="px-12 py-6" asChild>
-            <a href="https://wa.me/254723579077?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20High-Converting%20Video%20Ads!" target="_blank" rel="noopener noreferrer">
-              Get Started
-            </a>
-          </Button>
         </AnimatedSection>
       </div>
     </section>
+
+    <PricingSection service="High-Converting Video Ads" tiers={tiers} />
   </main>
 );
 

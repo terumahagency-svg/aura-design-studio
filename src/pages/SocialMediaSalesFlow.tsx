@@ -1,7 +1,55 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import PricingSection from "@/components/PricingSection";
 import { ArrowLeft, Share2 } from "lucide-react";
+
+const tiers = [
+  {
+    name: "Core",
+    tagline: "Kickstart your social lead gen",
+    price: "KSH 25,000",
+    period: "month",
+    accent: "light-blue",
+    features: [
+      "1 social platform managed",
+      "Professional content scripting",
+      "8 posts per month",
+      "Basic lead generation campaigns",
+      "Monthly analytics report",
+    ],
+  },
+  {
+    name: "Pro",
+    tagline: "Consistent pipeline of leads",
+    price: "KSH 55,000",
+    period: "month",
+    accent: "light-blue",
+    highlighted: true,
+    features: [
+      "2 social platforms managed",
+      "Advanced scripting & content calendar",
+      "16 posts per month",
+      "Targeted lead campaigns with funnels",
+      "Bi-weekly reports & optimizations",
+      "DM outreach sequences",
+    ],
+  },
+  {
+    name: "Elite",
+    tagline: "Your full social sales engine",
+    price: "KSH 100,000",
+    period: "month",
+    accent: "light-blue",
+    features: [
+      "All major platforms managed",
+      "Premium scripting & video content",
+      "Unlimited posts",
+      "Full-funnel lead campaigns",
+      "Weekly strategy calls",
+      "CRM integration & lead scoring",
+    ],
+  },
+];
 
 const SocialMediaSalesFlow = () => (
   <main className="min-h-screen">
@@ -15,22 +63,19 @@ const SocialMediaSalesFlow = () => (
             <div className="w-14 h-14 rounded-sm bg-light-blue/10 flex items-center justify-center">
               <Share2 className="w-6 h-6 text-light-blue" />
             </div>
-            <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">Automation</p>
+            <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">Social Media</p>
           </div>
           <h1 className="text-4xl md:text-6xl font-heading font-light leading-[1.1] mb-8">
-            Automated Social Media <span className="italic text-secondary">Sales Flow</span>
+            Grow With <span className="italic text-secondary">Social Media</span>
           </h1>
-          <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl mb-12">
-            Set up intelligent systems that convert your social media followers into paying customers on autopilot — DMs, funnels, and follow-ups all handled seamlessly.
+          <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl">
+            Support your sales team with high-quality leads through professional scripting and targeted social media campaigns.
           </p>
-          <Button variant="premium" size="lg" className="px-12 py-6" asChild>
-            <a href="https://wa.me/254723579077?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Automated%20Social%20Media%20Sales%20Flow!" target="_blank" rel="noopener noreferrer">
-              Get Started
-            </a>
-          </Button>
         </AnimatedSection>
       </div>
     </section>
+
+    <PricingSection service="Grow With Social Media" tiers={tiers} />
   </main>
 );
 
