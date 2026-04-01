@@ -1,7 +1,55 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import PricingSection from "@/components/PricingSection";
 import { ArrowLeft, Target } from "lucide-react";
+
+const tiers = [
+  {
+    name: "Core",
+    tagline: "For businesses getting started with ads",
+    price: "KSH 30,000",
+    period: "month",
+    accent: "deep-blue",
+    features: [
+      "1 ad platform (Meta or Google)",
+      "Campaign setup & launch",
+      "Monthly performance report",
+      "Basic audience targeting",
+      "Up to KSH 50K ad spend managed",
+    ],
+  },
+  {
+    name: "Pro",
+    tagline: "For growing brands ready to scale",
+    price: "KSH 60,000",
+    period: "month",
+    accent: "deep-blue",
+    highlighted: true,
+    features: [
+      "2 ad platforms (Meta + Google)",
+      "A/B testing & creative optimization",
+      "Bi-weekly performance reports",
+      "Retargeting & lookalike audiences",
+      "Up to KSH 150K ad spend managed",
+      "Dedicated account strategist",
+    ],
+  },
+  {
+    name: "Elite",
+    tagline: "Full-service ad department replacement",
+    price: "KSH 120,000",
+    period: "month",
+    accent: "deep-blue",
+    features: [
+      "All platforms (Meta, Google, TikTok, LinkedIn)",
+      "Full-funnel strategy & execution",
+      "Weekly reports & strategy calls",
+      "Custom audience & conversion tracking",
+      "Unlimited ad spend managed",
+      "Priority support & creative direction",
+    ],
+  },
+];
 
 const ExpertAdManagement = () => (
   <main className="min-h-screen">
@@ -20,17 +68,14 @@ const ExpertAdManagement = () => (
           <h1 className="text-4xl md:text-6xl font-heading font-light leading-[1.1] mb-8">
             Expert Ad <span className="italic text-secondary">Management</span>
           </h1>
-          <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl mb-12">
+          <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl">
             Your outsourced ad department. We manage your campaigns end-to-end — strategy, creative, optimization, and reporting — so every shilling works harder for your business.
           </p>
-          <Button variant="premium" size="lg" className="px-12 py-6" asChild>
-            <a href="https://wa.me/254723579077?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Expert%20Ad%20Management!" target="_blank" rel="noopener noreferrer">
-              Get Started
-            </a>
-          </Button>
         </AnimatedSection>
       </div>
     </section>
+
+    <PricingSection service="Expert Ad Management" tiers={tiers} />
   </main>
 );
 

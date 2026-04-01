@@ -1,7 +1,52 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import PricingSection from "@/components/PricingSection";
 import { ArrowLeft, Camera } from "lucide-react";
+
+const tiers = [
+  {
+    name: "Core",
+    tagline: "Capture the highlights",
+    price: "KSH 40,000",
+    accent: "secondary",
+    features: [
+      "Half-day event coverage",
+      "Highlight reel (60–90 sec)",
+      "10 edited photos for social media",
+      "Delivery within 7 business days",
+      "1 round of revisions",
+    ],
+  },
+  {
+    name: "Pro",
+    tagline: "Full event, full impact",
+    price: "KSH 80,000",
+    accent: "secondary",
+    highlighted: true,
+    features: [
+      "Full-day event coverage",
+      "Highlight reel + 2 short-form clips",
+      "25 edited photos",
+      "Behind-the-scenes content",
+      "Delivery within 5 business days",
+      "2 rounds of revisions",
+    ],
+  },
+  {
+    name: "Elite",
+    tagline: "Evergreen content engine",
+    price: "KSH 150,000",
+    accent: "secondary",
+    features: [
+      "Multi-day or multi-camera coverage",
+      "Full highlight reel + 5 social clips",
+      "50+ edited photos",
+      "Speaker/interview segments",
+      "Content calendar for 30 days post-event",
+      "Priority delivery & unlimited revisions",
+    ],
+  },
+];
 
 const EventsIntoAssets = () => (
   <main className="min-h-screen">
@@ -20,17 +65,14 @@ const EventsIntoAssets = () => (
           <h1 className="text-4xl md:text-6xl font-heading font-light leading-[1.1] mb-8">
             Turn Events into <span className="italic text-secondary">Assets</span>
           </h1>
-          <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl mb-12">
+          <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl">
             Transform your live moments — conferences, product launches, team events — into evergreen marketing content that keeps generating returns long after the event is over.
           </p>
-          <Button variant="premium" size="lg" className="px-12 py-6" asChild>
-            <a href="https://wa.me/254723579077?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20turning%20events%20into%20assets!" target="_blank" rel="noopener noreferrer">
-              Get Started
-            </a>
-          </Button>
         </AnimatedSection>
       </div>
     </section>
+
+    <PricingSection service="Turn Events into Assets" tiers={tiers} />
   </main>
 );
 
