@@ -64,16 +64,16 @@ const SocialMediaSalesFlow = () => (
             <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">Social Media</p>
           </div>
           <h1 className="text-4xl md:text-6xl font-heading font-light leading-[1.1] mb-8">
-            Grow With <span className="italic text-secondary">Social Media</span>
+            The Terumah <span className="italic text-secondary">Social Flow</span>
           </h1>
           <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl">
-            Support your sales team with high-quality leads through professional scripting and targeted social media campaigns.
+            Support your sales department with a steady stream of high-quality leads generated through professional scripting and targeted social media campaigns. This package works especially well with companies that already have a social media team.
           </p>
         </AnimatedSection>
       </div>
     </section>
 
-    <PricingSection service="Grow With Social Media" tiers={tiers} />
+    <PricingSection service="The Terumah Social Flow" tiers={tiers} />
   </main>
 );
 
