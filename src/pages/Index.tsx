@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import WhatsAppFAB from "@/components/WhatsAppFAB";
 
 const HeroSection = () => {
   const handleScrollToSection3 = () => {
