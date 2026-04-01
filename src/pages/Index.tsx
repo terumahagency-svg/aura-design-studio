@@ -1,10 +1,14 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
-import { Target, Camera, Share2, Play } from "lucide-react";
+import { Target, Camera, Share2, Play, Send } from "lucide-react";
 
 const HeroSection = () => {
   const handleScrollToSection3 = () => {
@@ -310,16 +314,183 @@ const CTASection = () => (
   </section>
 );
 
-const Footer = () => (
-  <footer className="border-t border-border py-16 px-6">
-    <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-      <p className="font-heading text-2xl font-light tracking-wide">Atelier</p>
-      <p className="text-muted-foreground font-body text-sm tracking-wide">
-        © {new Date().getFullYear()} — All rights reserved
-      </p>
-    </div>
-  </footer>
-);
+const ContactFooter = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    business: "",
+    question: "",
+  });
+  const [sending, setSending] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.fullName.trim() || !formData.email.trim() || !formData.question.trim()) {
+      toast({ title: "Please fill in the required fields", variant: "destructive" });
+      return;
+    }
+    setSending(true);
+
+    // Build WhatsApp message with form data
+    const msg = [
+      `*New Inquiry from ${formData.fullName.trim()}*`,
+      formData.business.trim() ? `Business: ${formData.business.trim()}` : "",
+      `Email: ${formData.email.trim()}`,
+      formData.phone.trim() ? `Phone: ${formData.phone.trim()}` : "",
+      `\nQuestion:\n${formData.question.trim()}`,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    window.open(
+      `https://wa.me/254723579077?text=${encodeURIComponent(msg)}`,
+      "_blank"
+    );
+
+    setSending(false);
+    toast({ title: "Opening WhatsApp…", description: "We'll get back to you shortly!" });
+    setFormData({ fullName: "", phone: "", email: "", business: "", question: "" });
+  };
+
+  const inputClasses =
+    "bg-transparent border-border font-body text-sm placeholder:text-muted-foreground/50 focus:border-secondary focus:ring-secondary/20 transition-colors duration-300";
+
+  return (
+    <footer className="bg-foreground text-primary-foreground">
+      <div className="max-w-6xl mx-auto px-6 py-32 md:py-44">
+        <div className="grid md:grid-cols-12 gap-16 md:gap-12">
+          {/* Left column */}
+          <div className="md:col-span-5">
+            <AnimatedSection>
+              <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold mb-6">
+                Get in Touch
+              </p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light leading-[1.1] mb-8">
+                What can we clear up{" "}
+                <span className="italic text-secondary">for you</span>?
+              </h2>
+              <div className="w-12 h-px bg-secondary mb-10" />
+              <p className="text-primary-foreground/60 font-body text-sm leading-relaxed max-w-sm">
+                Have a question about our services? Fill in the form and we'll get back to you within 24 hours.
+              </p>
+            </AnimatedSection>
+          </div>
+
+          {/* Right column — form */}
+          <div className="md:col-span-7">
+            <AnimatedSection delay={0.15}>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-primary-foreground/50 font-body text-xs tracking-[0.15em] uppercase mb-2">
+                      Full Name <span className="text-secondary">*</span>
+                    </label>
+                    <Input
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={handleChange}
+                      placeholder="John Doe"
+                      maxLength={100}
+                      className={inputClasses}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-primary-foreground/50 font-body text-xs tracking-[0.15em] uppercase mb-2">
+                      Phone Number
+                    </label>
+                    <Input
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="+254 7XX XXX XXX"
+                      maxLength={20}
+                      className={inputClasses}
+                    />
+                  </div>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-primary-foreground/50 font-body text-xs tracking-[0.15em] uppercase mb-2">
+                      Email <span className="text-secondary">*</span>
+                    </label>
+                    <Input
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="john@company.com"
+                      maxLength={255}
+                      className={inputClasses}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-primary-foreground/50 font-body text-xs tracking-[0.15em] uppercase mb-2">
+                      Business Name
+                    </label>
+                    <Input
+                      name="business"
+                      value={formData.business}
+                      onChange={handleChange}
+                      placeholder="Your Company Ltd."
+                      maxLength={100}
+                      className={inputClasses}
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-primary-foreground/50 font-body text-xs tracking-[0.15em] uppercase mb-2">
+                    Your Question <span className="text-secondary">*</span>
+                  </label>
+                  <Textarea
+                    name="question"
+                    value={formData.question}
+                    onChange={handleChange}
+                    placeholder="Tell us what you'd like to know…"
+                    maxLength={1000}
+                    rows={4}
+                    className={`${inputClasses} resize-none`}
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  variant="premium"
+                  size="lg"
+                  className="px-12 py-6 w-full sm:w-auto"
+                  disabled={sending}
+                >
+                  <Send className="w-4 h-4 mr-2" />
+                  {sending ? "Sending…" : "Send Message"}
+                </Button>
+              </form>
+            </AnimatedSection>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-primary-foreground/10 px-6 py-8">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="font-heading text-xl font-light tracking-wide text-primary-foreground/80">
+            Terumah Agency
+          </p>
+          <p className="text-primary-foreground/40 font-body text-xs tracking-wide">
+            © {new Date().getFullYear()} Terumah Agency — All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
 
 const Index = () => (
   <main className="min-h-screen">
@@ -328,7 +499,7 @@ const Index = () => (
     <MissingPieceSection />
     <ServicesSection />
     <CTASection />
-    <Footer />
+    <ContactFooter />
     <WhatsAppFAB targetSectionId="about-terumah" />
   </main>
 );
