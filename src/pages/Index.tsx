@@ -154,6 +154,102 @@ const AboutSection = () => (
   </section>
 );
 
+const MissingPieceSection = () => {
+  const navigate = useNavigate();
+
+  const offerings = [
+    {
+      title: "Expert Ad Management",
+      description: "Strategic, data-driven ad campaigns that maximize every shilling of your budget.",
+      icon: Target,
+      path: "/expert-ad-management",
+      accent: "deep-blue",
+    },
+    {
+      title: "Turn Events into Assets",
+      description: "Transform live moments into evergreen content that keeps generating returns.",
+      icon: Camera,
+      path: "/events-into-assets",
+      accent: "secondary",
+    },
+    {
+      title: "Automated Social Media Sales Flow",
+      description: "Set up systems that convert followers into paying customers on autopilot.",
+      icon: Share2,
+      path: "/social-media-sales-flow",
+      accent: "light-blue",
+    },
+    {
+      title: "High-Converting Video Ads",
+      description: "Cinematic ads engineered to stop the scroll and drive action.",
+      icon: Play,
+      path: "/video-ads",
+      accent: "secondary",
+    },
+  ];
+
+  return (
+    <section id="section-3" className="py-32 md:py-44 px-6 bg-muted/50">
+      <div className="max-w-6xl mx-auto">
+        <AnimatedSection>
+          <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold mb-6">
+            Our Solutions
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light leading-[1.15] mb-20 max-w-3xl">
+            What is the missing piece in your company's current{" "}
+            <span className="italic text-secondary">digital growth</span> strategy?
+          </h2>
+        </AnimatedSection>
+
+        <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
+          {offerings.map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <AnimatedSection key={item.path} delay={i * 0.12}>
+                <motion.button
+                  onClick={() => navigate(item.path)}
+                  whileHover={{ y: -6 }}
+                  transition={{ type: "spring", damping: 20, stiffness: 300 }}
+                  className={`group relative w-full text-left border border-border bg-card p-8 md:p-10 overflow-hidden transition-colors duration-500 hover:border-${item.accent}`}
+                >
+                  {/* Accent top line */}
+                  <div className={`absolute top-0 left-0 w-full h-[2px] bg-${item.accent} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
+
+                  <div className="flex items-start gap-5 mb-6">
+                    <div className={`flex-shrink-0 w-12 h-12 rounded-sm bg-${item.accent}/10 flex items-center justify-center`}>
+                      <Icon className={`w-5 h-5 text-${item.accent}`} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl md:text-2xl font-heading font-medium leading-tight group-hover:text-secondary transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <p className="text-muted-foreground font-body text-sm leading-relaxed mb-8">
+                    {item.description}
+                  </p>
+
+                  <span className={`inline-flex items-center gap-2 text-${item.accent} font-body text-xs tracking-[0.2em] uppercase font-semibold`}>
+                    Learn More
+                    <motion.span
+                      className="inline-block"
+                      initial={{ x: 0 }}
+                      whileHover={{ x: 4 }}
+                    >
+                      →
+                    </motion.span>
+                  </span>
+                </motion.button>
+              </AnimatedSection>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const ServicesSection = () => {
   const services = [
     { number: "01", title: "Strategy", description: "Defining the vision and roadmap for meaningful outcomes." },
@@ -162,7 +258,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="section-3" className="py-32 md:py-44 px-6 bg-muted/50">
+    <section className="py-32 md:py-44 px-6">
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold mb-6">
