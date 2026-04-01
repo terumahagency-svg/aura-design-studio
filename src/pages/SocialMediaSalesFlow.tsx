@@ -6,51 +6,49 @@ import { ArrowLeft, Share2 } from "lucide-react";
 const tiers = [
   {
     name: "Core",
-    tagline: "Kickstart your social lead gen",
-    price: "KSH 25,000",
+    tagline: "Converting existing interest into sales without the high overhead",
+    price: "KSH 30,000",
     period: "month",
     accent: "light-blue",
     features: [
-      "1 social platform managed",
-      "Professional content scripting",
-      "8 posts per month",
-      "Basic lead generation campaigns",
-      "Monthly analytics report",
+      "Get a list of leads lining up to buy from you",
+      "Content: 4 Reels/month (high-quality, conversion-focused hooks)",
+      "Ads: Single-platform management (Meta) — Lead Generation focus",
+      "Strategy: Monthly Sales Audit — we tell you what's working and what to stop",
+      "Recommended Ad Spend: KSH 15,000–30,000/mo (paid by client)",
     ],
   },
   {
     name: "Pro",
-    tagline: "Consistent pipeline of leads",
-    price: "KSH 55,000",
+    tagline: "Building a brand people recognize and trust before they even talk to you",
+    price: "KSH 75,000",
     period: "month",
     accent: "light-blue",
     highlighted: true,
     features: [
-      "2 social platforms managed",
-      "Advanced scripting & content calendar",
-      "16 posts per month",
-      "Targeted lead campaigns with funnels",
-      "Bi-weekly reports & optimizations",
-      "DM outreach sequences",
+      "New leads + Retargeting — we find new people, then chase them with ads until they buy",
+      "Content: 8 professional videos (includes 1 day of shooting + B-roll)",
+      "Ads: Multi-platform (Meta + TikTok) — split-test audiences to find your \"Gold Mine\"",
+      "Strategy: Bi-weekly strategy calls + Lead Tracking Sheet setup",
+      "Recommended Ad Spend: KSH 40,000–80,000/mo (paid by client)",
     ],
   },
   {
     name: "Elite",
-    tagline: "Your full social sales engine",
-    price: "KSH 100,000",
+    tagline: "Total market takeover — we act as your entire marketing department",
+    price: "KSH 150,000",
     period: "month",
     accent: "light-blue",
     features: [
-      "All major platforms managed",
-      "Premium scripting & video content",
-      "Unlimited posts",
-      "Full-funnel lead campaigns",
-      "Weekly strategy calls",
-      "CRM integration & lead scoring",
+      "The Omnichannel Ecosystem — capture leads, nurture via SMS/Email, dominate the search feed",
+      "Content: 15 premium videos + 1 cinematic \"Brand Story\" video per quarter",
+      "Scriptwriting, lighting & professional editing included",
+      "Ads: Full-funnel management (Meta, TikTok & Google Search) — ROI & CAC focus",
+      "Strategy: Weekly Performance Oversight + Sales Team Training videos",
+      "Recommended Ad Spend: KSH 100,000+/mo (paid by client)",
     ],
   },
 ];
-
 const SocialMediaSalesFlow = () => (
   <main className="min-h-screen">
     <section className="py-32 md:py-44 px-6">
@@ -66,16 +64,16 @@ const SocialMediaSalesFlow = () => (
             <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">Social Media</p>
           </div>
           <h1 className="text-4xl md:text-6xl font-heading font-light leading-[1.1] mb-8">
-            Grow With <span className="italic text-secondary">Social Media</span>
+            The Terumah <span className="italic text-secondary">Social Flow</span>
           </h1>
           <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl">
-            Support your sales team with high-quality leads through professional scripting and targeted social media campaigns.
+            Support your sales department with a steady stream of high-quality leads generated through professional scripting and targeted social media campaigns. This package works especially well with companies that already have a social media team.
           </p>
         </AnimatedSection>
       </div>
     </section>
 
-    <PricingSection service="Grow With Social Media" tiers={tiers} />
+    <PricingSection service="The Terumah Social Flow" tiers={tiers} />
   </main>
 );
 
