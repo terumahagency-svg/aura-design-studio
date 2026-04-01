@@ -270,7 +270,7 @@ const ContactFooter = () => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.fullName.trim() || !formData.email.trim() || !formData.question.trim()) {
       toast({ title: "Please fill in the required fields", variant: "destructive" });
@@ -278,24 +278,25 @@ const ContactFooter = () => {
     }
     setSending(true);
 
-    // Build WhatsApp message with form data
-    const msg = [
-      `*New Inquiry from ${formData.fullName.trim()}*`,
-      formData.business.trim() ? `Business: ${formData.business.trim()}` : "",
-      `Email: ${formData.email.trim()}`,
-      formData.phone.trim() ? `Phone: ${formData.phone.trim()}` : "",
-      `\nQuestion:\n${formData.question.trim()}`,
-    ]
-      .filter(Boolean)
-      .join("\n");
-
-    window.open(
-      `https://wa.me/254723579077?text=${encodeURIComponent(msg)}`,
-      "_blank"
-    );
+    const { error } = await supabase.from("contact_submissions").insert({
+      full_name: formData.fullName.trim(),
+      email: formData.email.trim(),
+      phone: formData.phone.trim() || null,
+      business_name: formData.business.trim() || null,
+      question: formData.question.trim(),
+    });
 
     setSending(false);
-    toast({ title: "Opening WhatsApp…", description: "We'll get back to you shortly!" });
+
+    if (error) {
+      toast({ title: "Something went wrong", description: "Please try again later.", variant: "destructive" });
+      return;
+    }
+
+    toast({
+      title: "Message received!",
+      description: "Thank you for reaching out. We'll get back to you within 24 hours.",
+    });
     setFormData({ fullName: "", phone: "", email: "", business: "", question: "" });
   };
 
