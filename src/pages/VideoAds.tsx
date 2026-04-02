@@ -60,12 +60,6 @@ const addons = [
     label: "Fast-Track Delivery within 48 hours (+ 20% rush fee)",
     description: "Priority post-production with delivery in 48 hours.",
   },
-  {
-    id: "bundle-3mo",
-    label: "3-Month Bundle (Save 15%)",
-    description:
-      "Book an ad every month for 3 months and save 15% on the total cost.",
-  },
 ];
 
 const VideoAds = () => (
@@ -99,11 +93,54 @@ const VideoAds = () => (
       </div>
     </section>
 
+    {/* Bundling disclaimer */}
+    <section className="px-6">
+      <div className="max-w-6xl mx-auto">
+        <AnimatedSection>
+          <div className="border border-secondary/30 bg-secondary/5 px-6 py-4 text-center">
+            <p className="font-body text-sm text-foreground">
+              <span className="font-semibold text-secondary">Bundling:</span>{" "}
+              Book an ad every month for 3 months and save 15% on the total cost.
+            </p>
+          </div>
+        </AnimatedSection>
+      </div>
+    </section>
+
     <PricingSection
       service="Almasi by Terumah"
       tiers={tiers}
       addons={addons}
     />
+
+    {/* Visible add-ons section */}
+    <section className="py-16 md:py-24 px-6">
+      <div className="max-w-4xl mx-auto">
+        <AnimatedSection>
+          <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold mb-6 text-center">
+            Add-ons
+          </p>
+          <h2 className="text-2xl md:text-3xl font-heading font-light leading-[1.15] mb-12 text-center">
+            Boost your package with{" "}
+            <span className="italic text-secondary">extras</span>
+          </h2>
+        </AnimatedSection>
+        <div className="grid md:grid-cols-3 gap-6">
+          {addons.slice(0, 3).map((addon, i) => (
+            <AnimatedSection key={addon.id} delay={i * 0.1}>
+              <div className="border border-border bg-card p-6 md:p-8 h-full flex flex-col">
+                <h3 className="font-heading text-lg font-medium mb-2 text-foreground">
+                  {addon.label}
+                </h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  {addon.description}
+                </p>
+              </div>
+            </AnimatedSection>
+          ))}
+        </div>
+      </div>
+    </section>
   </main>
 );
 
