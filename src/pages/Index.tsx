@@ -10,6 +10,10 @@ import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
 import { Target, Camera, Share2, Play, Send } from "lucide-react";
+import cardBgAdManagement from "@/assets/card-bg-ad-management.jpg";
+import cardBgEvents from "@/assets/card-bg-events.jpg";
+import cardBgSocial from "@/assets/card-bg-social.jpg";
+import cardBgVideo from "@/assets/card-bg-video.jpg";
 
 const HeroSection = () => {
   const handleScrollToSection3 = () => {
