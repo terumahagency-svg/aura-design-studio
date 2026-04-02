@@ -36,7 +36,7 @@ const tiers = [
     features: [
       "3-Person Crew (Lead, B-Roll Specialist, Sound/Lighting Tech) + Drone | Multi-day/Full-day coverage",
       "1 x Executive Summary Film (5–7 mins): Documentary-style film of the event's impact",
-      ""Same-Day Edit" (SDE): 60s teaser delivered during the event for the closing ceremony",
+      '"Same-Day Edit" (SDE): 60s teaser delivered during the event for the closing ceremony',
       "Raw Footage Delivery: Organized library of all speeches for internal records",
       "Unlimited Social Clips: Every major "aha!" moment turned into a Reel",
     ],
