@@ -46,6 +46,7 @@ export type Database = {
       }
       lead_submissions: {
         Row: {
+          addons: string[] | null
           business_name: string | null
           created_at: string
           email: string
@@ -57,6 +58,7 @@ export type Database = {
           tier: string
         }
         Insert: {
+          addons?: string[] | null
           business_name?: string | null
           created_at?: string
           email: string
@@ -68,6 +70,7 @@ export type Database = {
           tier: string
         }
         Update: {
+          addons?: string[] | null
           business_name?: string | null
           created_at?: string
           email?: string

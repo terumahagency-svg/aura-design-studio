@@ -1,0 +1,1 @@
+ALTER TABLE public.lead_submissions ADD COLUMN addons text[] DEFAULT '{}';
