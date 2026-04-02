@@ -11,18 +11,22 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Send } from "lucide-react";
+import type { PricingAddon } from "@/components/PricingSection";
 
 interface LeadCaptureDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   service: string;
   tier: string;
+  addons?: PricingAddon[];
 }
 
-const LeadCaptureDialog = ({ open, onOpenChange, service, tier }: LeadCaptureDialogProps) => {
+const LeadCaptureDialog = ({ open, onOpenChange, service, tier, addons }: LeadCaptureDialogProps) => {
   const { toast } = useToast();
   const [sending, setSending] = useState(false);
+  const [selectedAddons, setSelectedAddons] = useState<string[]>([]);
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
@@ -35,6 +39,12 @@ const LeadCaptureDialog = ({ open, onOpenChange, service, tier }: LeadCaptureDia
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  const toggleAddon = (addonId: string) => {
+    setSelectedAddons((prev) =>
+      prev.includes(addonId) ? prev.filter((id) => id !== addonId) : [...prev, addonId]
+    );
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.fullName.trim() || !formData.email.trim() || !formData.successVision.trim()) {
@@ -43,6 +53,11 @@ const LeadCaptureDialog = ({ open, onOpenChange, service, tier }: LeadCaptureDia
     }
 
     setSending(true);
+
+    const addonLabels = addons
+      ? selectedAddons.map((id) => addons.find((a) => a.id === id)?.label).filter(Boolean)
+      : [];
+
     const { error } = await supabase.from("lead_submissions").insert({
       full_name: formData.fullName.trim(),
       email: formData.email.trim(),
@@ -51,7 +66,8 @@ const LeadCaptureDialog = ({ open, onOpenChange, service, tier }: LeadCaptureDia
       success_vision: formData.successVision.trim(),
       service,
       tier,
-    });
+      addons: addonLabels.length > 0 ? addonLabels : null,
+    } as any);
     setSending(false);
 
     if (error) {
@@ -64,6 +80,7 @@ const LeadCaptureDialog = ({ open, onOpenChange, service, tier }: LeadCaptureDia
       description: "Our team will reach out to you within 24 hours.",
     });
     setFormData({ fullName: "", phone: "", email: "", business: "", successVision: "" });
+    setSelectedAddons([]);
     onOpenChange(false);
   };
 
@@ -72,7 +89,7 @@ const LeadCaptureDialog = ({ open, onOpenChange, service, tier }: LeadCaptureDia
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-lg bg-card border-border">
+      <DialogContent className="sm:max-w-lg bg-card border-border max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="font-heading text-2xl font-light">
             Get Started — <span className="italic text-secondary">{tier}</span>
@@ -127,6 +144,36 @@ const LeadCaptureDialog = ({ open, onOpenChange, service, tier }: LeadCaptureDia
               className={`${inputClasses} resize-none`}
             />
           </div>
+
+          {addons && addons.length > 0 && (
+            <div>
+              <label className="block text-muted-foreground font-body text-xs tracking-[0.15em] uppercase mb-3">
+                Add-ons (optional)
+              </label>
+              <div className="space-y-3">
+                {addons.map((addon) => (
+                  <label
+                    key={addon.id}
+                    className="flex items-start gap-3 cursor-pointer group"
+                  >
+                    <Checkbox
+                      checked={selectedAddons.includes(addon.id)}
+                      onCheckedChange={() => toggleAddon(addon.id)}
+                      className="mt-0.5 border-border data-[state=checked]:bg-secondary data-[state=checked]:border-secondary"
+                    />
+                    <div>
+                      <span className="font-body text-sm text-foreground group-hover:text-secondary transition-colors">
+                        {addon.label}
+                      </span>
+                      <p className="font-body text-xs text-muted-foreground leading-relaxed mt-0.5">
+                        {addon.description}
+                      </p>
+                    </div>
+                  </label>
+                ))}
+              </div>
+            </div>
+          )}
 
           <Button type="submit" variant="premium" size="lg" className="w-full py-5" disabled={sending}>
             <Send className="w-4 h-4 mr-2" />

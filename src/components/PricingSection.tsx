@@ -15,12 +15,19 @@ export interface PricingTier {
   accent: string;
 }
 
+export interface PricingAddon {
+  id: string;
+  label: string;
+  description: string;
+}
+
 interface PricingSectionProps {
   service: string;
   tiers: PricingTier[];
+  addons?: PricingAddon[];
 }
 
-const PricingSection = ({ service, tiers }: PricingSectionProps) => {
+const PricingSection = ({ service, tiers, addons }: PricingSectionProps) => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedTier, setSelectedTier] = useState("");
 
@@ -104,6 +111,7 @@ const PricingSection = ({ service, tiers }: PricingSectionProps) => {
         onOpenChange={setDialogOpen}
         service={service}
         tier={selectedTier}
+        addons={addons}
       />
     </>
   );
