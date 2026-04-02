@@ -6,44 +6,39 @@ import { ArrowLeft, Camera } from "lucide-react";
 const tiers = [
   {
     name: "Core",
-    tagline: "Capture the highlights",
-    price: "KSH 40,000",
+    tagline: "Workshops, half-day seminars, or small networking mixers",
+    price: "KES 35,000",
     accent: "secondary",
     features: [
-      "Half-day event coverage",
-      "Highlight reel (60–90 sec)",
-      "10 edited photos for social media",
-      "Delivery within 7 business days",
-      "1 round of revisions",
+      "1 Videographer | Up to 4 hours of coverage",
+      "1 x Cinematic Highlight Reel (60–90s): High-energy, music-driven summary of the event",
+      '3 x "Key Moment" Vertical Clips: Short 15–30s clips (TikTok/Reels style) of a speaker\'s best quote or a crowd reaction',
     ],
   },
   {
     name: "Pro",
-    tagline: "Full event, full impact",
-    price: "KSH 80,000",
+    tagline: "Full-day conferences, product launches, or AGMs",
+    price: "KES 80,000",
     accent: "secondary",
     highlighted: true,
     features: [
-      "Full-day event coverage",
-      "Highlight reel + 2 short-form clips",
-      "25 edited photos",
-      "Behind-the-scenes content",
-      "Delivery within 5 business days",
-      "2 rounds of revisions",
+      "2 Videographers (stage + vibe/crowd) | Full-day coverage",
+      "1 x Corporate Wrap Video (3 mins): Includes soundbites from speakers and high-quality b-roll",
+      '5 x Interview/Vox-Pop Videos: Quick "talking head" interviews with attendees or VIPs',
+      "10 x Social Media clips: Short vertical clips optimized for mobile",
     ],
   },
   {
     name: "Elite",
-    tagline: "Evergreen content engine",
-    price: "KSH 150,000",
+    tagline: "Multi-day summits, international expos, or high-stakes brand launches",
+    price: "KES 200,000",
     accent: "secondary",
     features: [
-      "Multi-day or multi-camera coverage",
-      "Full highlight reel + 5 social clips",
-      "50+ edited photos",
-      "Speaker/interview segments",
-      "Content calendar for 30 days post-event",
-      "Priority delivery & unlimited revisions",
+      "3-Person Crew (Lead, B-Roll Specialist, Sound/Lighting Tech) + Drone | Multi-day/Full-day coverage",
+      "1 x Executive Summary Film (5–7 mins): Documentary-style film of the event's impact",
+      '"Same-Day Edit" (SDE): 60s teaser delivered during the event for the closing ceremony',
+      "Raw Footage Delivery: Organized library of all speeches for internal records",
+      'Unlimited Social Clips: Every major "aha!" moment turned into a Reel',
     ],
   },
 ];
@@ -60,19 +55,19 @@ const EventsIntoAssets = () => (
             <div className="w-14 h-14 rounded-sm bg-secondary/10 flex items-center justify-center">
               <Camera className="w-6 h-6 text-secondary" />
             </div>
-            <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">Content Creation</p>
+            <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">Terumah Sherehe</p>
           </div>
           <h1 className="text-4xl md:text-6xl font-heading font-light leading-[1.1] mb-8">
             Turn Events into <span className="italic text-secondary">Assets</span>
           </h1>
           <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl">
-            Transform your live moments — conferences, product launches, team events — into evergreen marketing content that keeps generating returns long after the event is over.
+            The Terumah Sherehe provides the professional-grade video coverage needed to turn one-time gatherings into permanent tools for business growth and industry dominance.
           </p>
         </AnimatedSection>
       </div>
     </section>
 
-    <PricingSection service="Turn Events into Assets" tiers={tiers} />
+    <PricingSection service="Terumah Sherehe" tiers={tiers} />
   </main>
 );
 
