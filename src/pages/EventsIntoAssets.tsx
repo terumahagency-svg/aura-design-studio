@@ -12,7 +12,7 @@ const tiers = [
     features: [
       "1 Videographer | Up to 4 hours of coverage",
       "1 x Cinematic Highlight Reel (60–90s): High-energy, music-driven summary of the event",
-      "3 x "Key Moment" Vertical Clips: Short 15–30s clips (TikTok/Reels style) of a speaker's best quote or a crowd reaction",
+      '3 x "Key Moment" Vertical Clips: Short 15–30s clips (TikTok/Reels style) of a speaker\'s best quote or a crowd reaction',
     ],
   },
   {
