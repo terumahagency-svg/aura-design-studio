@@ -173,6 +173,7 @@ const MissingPieceSection = () => {
       icon: Target,
       path: "/expert-ad-management",
       accent: "deep-blue",
+      bgImage: cardBgAdManagement,
     },
     {
       title: "Turn Events into Assets",
@@ -180,6 +181,7 @@ const MissingPieceSection = () => {
       icon: Camera,
       path: "/events-into-assets",
       accent: "secondary",
+      bgImage: cardBgEvents,
     },
     {
       title: "Grow With Social Media",
@@ -187,6 +189,7 @@ const MissingPieceSection = () => {
       icon: Share2,
       path: "/social-media-sales-flow",
       accent: "light-blue",
+      bgImage: cardBgSocial,
     },
     {
       title: "High-Converting Video Ads",
@@ -194,6 +197,7 @@ const MissingPieceSection = () => {
       icon: Play,
       path: "/video-ads",
       accent: "secondary",
+      bgImage: cardBgVideo,
     },
   ];
 
