@@ -60,12 +60,6 @@ const addons = [
     label: "Fast-Track Delivery within 48 hours (+ 20% rush fee)",
     description: "Priority post-production with delivery in 48 hours.",
   },
-  {
-    id: "bundle-3mo",
-    label: "3-Month Bundle (Save 15%)",
-    description:
-      "Book an ad every month for 3 months and save 15% on the total cost.",
-  },
 ];
 
 const VideoAds = () => (
