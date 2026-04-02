@@ -24,7 +24,7 @@ const tiers = [
     features: [
       "2 Videographers (stage + vibe/crowd) | Full-day coverage",
       "1 x Corporate Wrap Video (3 mins): Includes soundbites from speakers and high-quality b-roll",
-      "5 x Interview/Vox-Pop Videos: Quick "talking head" interviews with attendees or VIPs",
+      '5 x Interview/Vox-Pop Videos: Quick "talking head" interviews with attendees or VIPs',
       "10 x Social Media clips: Short vertical clips optimized for mobile",
     ],
   },
