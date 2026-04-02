@@ -38,7 +38,7 @@ const tiers = [
       "1 x Executive Summary Film (5–7 mins): Documentary-style film of the event's impact",
       '"Same-Day Edit" (SDE): 60s teaser delivered during the event for the closing ceremony',
       "Raw Footage Delivery: Organized library of all speeches for internal records",
-      "Unlimited Social Clips: Every major "aha!" moment turned into a Reel",
+      'Unlimited Social Clips: Every major "aha!" moment turned into a Reel',
     ],
   },
 ];
