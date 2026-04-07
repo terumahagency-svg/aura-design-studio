@@ -10,6 +10,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
 import { Target, Camera, Share2, Play, Send } from "lucide-react";
+import aboutHero from "@/assets/about-hero.jpg";
+import sectionDivider from "@/assets/section-divider.jpg";
 
 const HeroSection = () => {
   const handleScrollToSection3 = () => {
@@ -83,6 +85,13 @@ const HeroSection = () => {
 const AboutSection = () => (
   <section id="about-terumah" className="py-32 md:py-44 px-6">
     <div className="max-w-6xl mx-auto">
+      {/* Hero image for About section */}
+      <AnimatedSection>
+        <div className="relative w-full h-64 md:h-80 lg:h-96 mb-16 overflow-hidden">
+          <img src={aboutHero} alt="Terumah Agency team collaborating on strategy" loading="lazy" width={1280} height={854} className="w-full h-full object-cover object-top" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+        </div>
+      </AnimatedSection>
       <div className="grid md:grid-cols-12 gap-16 md:gap-12">
         {/* Left column — headline + Hebrew word */}
         <div className="md:col-span-5">
@@ -206,8 +215,12 @@ const MissingPieceSection = () => {
   ];
 
   return (
-    <section id="section-3" className="py-32 md:py-44 px-6 bg-muted/50">
-      <div className="max-w-6xl mx-auto">
+    <section id="section-3" className="relative py-32 md:py-44 px-6 bg-muted/50">
+      {/* Section divider image */}
+      <div className="absolute inset-0 opacity-[0.04]">
+        <img src={sectionDivider} alt="" loading="lazy" width={1920} height={512} className="w-full h-full object-cover" />
+      </div>
+      <div className="relative z-10 max-w-6xl mx-auto">
         <AnimatedSection>
           <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold mb-6">
             Our Solutions
