@@ -243,27 +243,9 @@ const MissingPieceSection = () => {
                     {item.description}
                   </p>
 
-                  <span
-                    className="relative inline-flex items-center gap-2 font-body text-xs tracking-[0.2em] uppercase font-semibold overflow-hidden rounded-full"
-                  >
-                    {/* Background image layer */}
-                    <span
-                      className="absolute inset-0 bg-cover bg-center"
-                      style={{ backgroundImage: `url(${item.bgImage})` }}
-                    />
-                    {/* Dark overlay for readability */}
-                    <span className="absolute inset-0 bg-foreground/50" />
-                    {/* Glassmorphism pill */}
-                    <span className="relative z-10 inline-flex items-center gap-2 px-5 py-2.5 bg-primary-foreground/15 backdrop-blur-md border border-primary-foreground/30 rounded-full text-primary-foreground shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_12px_rgba(255,255,255,0.08)] animate-[pulse_3s_ease-in-out_infinite]">
-                      Learn More
-                      <motion.span
-                        className="inline-block"
-                        initial={{ x: 0 }}
-                        whileHover={{ x: 4 }}
-                      >
-                        →
-                      </motion.span>
-                    </span>
+                  <span className="inline-flex items-center gap-2 px-5 py-2.5 font-body text-xs tracking-[0.2em] uppercase font-semibold rounded-full bg-background/10 backdrop-blur-md border border-foreground/20 text-foreground shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),0_0_12px_rgba(255,255,255,0.05)] group-hover:border-secondary/50 group-hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_16px_rgba(255,255,255,0.1)] transition-all duration-300">
+                    Learn More
+                    <span className="inline-block group-hover:translate-x-1 transition-transform duration-300">→</span>
                   </span>
                 </motion.button>
               </AnimatedSection>
