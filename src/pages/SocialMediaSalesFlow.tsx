@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import PricingSection from "@/components/PricingSection";
 import { ArrowLeft, Share2 } from "lucide-react";
+import socialMediaHero from "@/assets/social-media-hero.jpg";
 
 const tiers = [
   {
@@ -51,8 +52,12 @@ const tiers = [
 ];
 const SocialMediaSalesFlow = () => (
   <main className="min-h-screen">
-    <section className="py-32 md:py-44 px-6">
-      <div className="max-w-4xl mx-auto">
+    <section className="relative py-32 md:py-44 px-6">
+      <div className="absolute inset-0">
+        <img src={socialMediaHero} alt="Social media content creation" width={1280} height={720} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/95 to-background" />
+      </div>
+      <div className="relative z-10 max-w-4xl mx-auto">
         <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground font-body text-sm tracking-wide hover:text-secondary transition-colors mb-12">
           <ArrowLeft className="w-4 h-4" /> Back to Home
         </Link>
