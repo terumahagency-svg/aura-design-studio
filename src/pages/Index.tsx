@@ -141,12 +141,24 @@ const AboutSection = () => (
                   Our high-converting video ads
                 </p>
               </div>
+              <div className="border-l-2 border-secondary pl-6 py-2">
+                <p className="font-heading text-xl md:text-2xl text-foreground mb-2">Terumah Sherehe</p>
+                <p className="text-muted-foreground font-body text-sm leading-relaxed">
+                  Professional event coverage turned into lasting business assets
+                </p>
+              </div>
+              <div className="border-l-2 border-accent pl-6 py-2">
+                <p className="font-heading text-xl md:text-2xl text-foreground mb-2">The Terumah Social Flow</p>
+                <p className="text-muted-foreground font-body text-sm leading-relaxed">
+                  Strategic social media campaigns that fuel your sales pipeline
+                </p>
+              </div>
             </div>
           </AnimatedSection>
 
           <AnimatedSection delay={0.4}>
             <p className="text-muted-foreground font-body text-base leading-[1.9] mb-6">
-              Whether it's through Terumah Targeted or Almasi, we treat your marketing budget as a{" "}
+              Whether it&apos;s through Terumah Targeted, Terumah Sherehe, The Terumah Social Flow, or Almasi, we treat your marketing budget as a{" "}
               <span className="text-secondary font-medium">sacred trust</span>.
             </p>
             <p className="text-foreground font-body text-base md:text-lg leading-[1.9] font-medium">
