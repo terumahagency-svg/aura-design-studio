@@ -275,7 +275,6 @@ const MissingPieceSection = () => {
             </motion.button>
               </AnimatedSection>
             ))
-          })}
         </div>
       </div>
     </section>
