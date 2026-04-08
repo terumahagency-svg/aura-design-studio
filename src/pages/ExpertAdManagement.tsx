@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import PricingSection from "@/components/PricingSection";
-import { ArrowLeft, Target } from "lucide-react";
-import adManagementHero from "@/assets/ad-management-hero.jpg";
+import { ArrowLeft } from "lucide-react";
 
 const tiers = [
   {
@@ -62,8 +61,7 @@ const ExpertAdManagement = () => (
   <main className="min-h-screen">
     <section className="relative py-32 md:py-44 px-6">
       <div className="absolute inset-0">
-        <img src={adManagementHero} alt="Ad analytics dashboard" width={1280} height={720} className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/95 to-background" />
+        <div className="w-full h-full bg-gradient-to-br from-deep-blue/20 via-secondary/10 to-background" />
       </div>
       <div className="relative z-10 max-w-4xl mx-auto">
         <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground font-body text-sm tracking-wide hover:text-secondary transition-colors mb-12">
@@ -71,10 +69,10 @@ const ExpertAdManagement = () => (
         </Link>
         <AnimatedSection>
           <div className="flex items-center gap-4 mb-8">
-            <div className="w-14 h-14 rounded-sm bg-deep-blue/10 flex items-center justify-center">
-              <Target className="w-6 h-6 text-deep-blue" />
+            <div className="w-16 h-16 rounded-sm bg-deep-blue/10 border border-deep-blue/20 flex items-center justify-center">
+              <span className="font-heading text-xl font-semibold text-deep-blue">TT</span>
             </div>
-          <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">Terumah Targeted</p>
+            <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">Terumah Targeted</p>
           </div>
           <h1 className="text-4xl md:text-6xl font-heading font-light leading-[1.1] mb-8">
             Terumah <span className="italic text-secondary">Targeted</span>

@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import PricingSection from "@/components/PricingSection";
-import { ArrowLeft, Play } from "lucide-react";
-import videoAdsHero from "@/assets/video-ads-hero.jpg";
+import { ArrowLeft } from "lucide-react";
 
 const tiers = [
   {
@@ -67,8 +66,7 @@ const VideoAds = () => (
   <main className="min-h-screen">
     <section className="relative py-32 md:py-44 px-6">
       <div className="absolute inset-0">
-        <img src={videoAdsHero} alt="Professional cinema camera on set" width={1280} height={720} className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/95 to-background" />
+        <div className="w-full h-full bg-gradient-to-br from-secondary/20 via-deep-blue/10 to-background" />
       </div>
       <div className="relative z-10 max-w-4xl mx-auto">
         <Link
@@ -79,8 +77,8 @@ const VideoAds = () => (
         </Link>
         <AnimatedSection>
           <div className="flex items-center gap-4 mb-8">
-            <div className="w-14 h-14 rounded-sm bg-secondary/10 flex items-center justify-center">
-              <Play className="w-6 h-6 text-secondary" />
+            <div className="w-16 h-16 rounded-sm bg-secondary/10 border border-secondary/20 flex items-center justify-center">
+              <span className="font-heading text-xl font-semibold text-secondary">AL</span>
             </div>
             <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">
               Almasi by Terumah
