@@ -241,40 +241,39 @@ const MissingPieceSection = () => {
         </AnimatedSection>
 
         <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
-        {offerings.map((item, i) => (
-              <AnimatedSection key={item.path} delay={i * 0.12}>
-                <motion.button
-                  onClick={() => navigate(item.path)}
-                  whileHover={{ y: -6 }}
-                  transition={{ type: "spring", damping: 20, stiffness: 300 }}
-                  className={`group relative w-full text-left border border-border bg-card p-8 md:p-10 overflow-hidden transition-colors duration-500 hover:border-${item.accent}`}
-                >
-                  {/* Accent top line */}
-                  <div className={`absolute top-0 left-0 w-full h-[2px] bg-${item.accent} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
+          {offerings.map((item, i) => (
+            <AnimatedSection key={item.path} delay={i * 0.12}>
+              <motion.button
+                onClick={() => navigate(item.path)}
+                whileHover={{ y: -6 }}
+                transition={{ type: "spring", damping: 20, stiffness: 300 }}
+                className={`group relative w-full text-left border border-border bg-card p-8 md:p-10 overflow-hidden transition-colors duration-500 hover:border-${item.accent}`}
+              >
+                <div className={`absolute top-0 left-0 w-full h-[2px] bg-${item.accent} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
 
-                  <div className="flex items-start gap-5 mb-6">
-                    <div className={`flex-shrink-0 w-14 h-14 rounded-sm bg-${item.accent}/10 border border-${item.accent}/20 flex items-center justify-center`}>
-                      <span className={`font-heading text-lg font-semibold text-${item.accent}`}>{item.monogram}</span>
-                    </div>
-                    <div className="flex-1">
-                      <p className={`text-${item.accent} font-body text-[10px] tracking-[0.2em] uppercase font-semibold mb-1`}>{item.brandName}</p>
-                      <h3 className="text-xl md:text-2xl font-heading font-medium leading-tight group-hover:text-secondary transition-colors duration-300">
-                        {item.title}
-                      </h3>
-                    </div>
+                <div className="flex items-start gap-5 mb-6">
+                  <div className={`flex-shrink-0 w-14 h-14 rounded-sm bg-${item.accent}/10 border border-${item.accent}/20 flex items-center justify-center`}>
+                    <span className={`font-heading text-lg font-semibold text-${item.accent}`}>{item.monogram}</span>
                   </div>
+                  <div className="flex-1">
+                    <p className={`text-${item.accent} font-body text-[10px] tracking-[0.2em] uppercase font-semibold mb-1`}>{item.brandName}</p>
+                    <h3 className="text-xl md:text-2xl font-heading font-medium leading-tight group-hover:text-secondary transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                  </div>
+                </div>
 
-                  <p className="text-muted-foreground font-body text-sm leading-relaxed mb-8">
-                    {item.description}
-                  </p>
+                <p className="text-muted-foreground font-body text-sm leading-relaxed mb-8">
+                  {item.description}
+                </p>
 
-                  <span className="inline-flex items-center gap-2 px-5 py-2.5 font-body text-xs tracking-[0.2em] uppercase font-semibold rounded-full bg-background/10 backdrop-blur-md border border-foreground/20 text-foreground shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),0_0_12px_rgba(255,255,255,0.05)] group-hover:border-secondary/50 group-hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_16px_rgba(255,255,255,0.1)] transition-all duration-300">
-                    Learn More
-                    <span className="inline-block group-hover:translate-x-1 transition-transform duration-300">→</span>
-                  </span>
-            </motion.button>
-              </AnimatedSection>
-            ))
+                <span className="inline-flex items-center gap-2 px-5 py-2.5 font-body text-xs tracking-[0.2em] uppercase font-semibold rounded-full bg-background/10 backdrop-blur-md border border-foreground/20 text-foreground shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),0_0_12px_rgba(255,255,255,0.05)] group-hover:border-secondary/50 group-hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_16px_rgba(255,255,255,0.1)] transition-all duration-300">
+                  Learn More
+                  <span className="inline-block group-hover:translate-x-1 transition-transform duration-300">→</span>
+                </span>
+              </motion.button>
+            </AnimatedSection>
+          ))}
         </div>
       </div>
     </section>
