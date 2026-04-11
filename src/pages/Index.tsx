@@ -11,6 +11,8 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
 import { Send } from "lucide-react";
 import sectionDivider from "@/assets/section-divider.jpg";
+// @ts-ignore
+import heroVideo from "/hero-butterfly.mp4.asset.json";
 
 const HeroSection = () => {
   const handleScrollToSection3 = () => {
@@ -19,7 +21,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-end overflow-hidden pb-24 md:pb-32">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <video
           autoPlay
@@ -28,16 +30,16 @@ const HeroSection = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/hero-bg.mp4" type="video/mp4" />
+          <source src={heroVideo?.url || "/hero-bg.mp4"} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-foreground/40" />
+        <div className="absolute inset-0 bg-foreground/50" />
       </div>
-      <div className="relative z-10 px-6 md:px-16 lg:px-24 w-full max-w-7xl">
+      <div className="relative z-10 text-center px-6 flex flex-col items-center">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-semibold text-primary-foreground leading-[1.05] tracking-tight mb-12 max-w-4xl"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-semibold text-primary-foreground leading-[1.05] tracking-tight mb-6"
         >
           READY TO
           <br />
@@ -46,35 +48,37 @@ const HeroSection = () => {
           YOUR <span className="italic text-secondary font-light">BUSINESS</span>?
         </motion.h1>
 
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="text-primary-foreground/60 font-body text-sm md:text-base tracking-[0.15em] uppercase font-medium mb-4"
+        >
+          KSH. 100,000+ Revenue Generated
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+          className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-secondary leading-none mb-10"
+        >
+          <AnimatedCounter target={105000} duration={2.8} />
+        </motion.p>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row sm:items-end gap-10 sm:gap-16"
+          transition={{ duration: 0.6, delay: 1.3 }}
         >
-          <div>
-            <p className="text-6xl md:text-7xl lg:text-8xl font-heading font-bold text-secondary leading-none mb-2">
-              <AnimatedCounter target={105000} duration={2.8} />
-            </p>
-            <p className="text-primary-foreground/70 font-body text-sm md:text-base tracking-[0.15em] uppercase font-medium">
-              KSH. 100,000+ Revenue Generated
-            </p>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
+          <Button
+            variant="premium"
+            size="lg"
+            className="px-16 py-7 text-sm shadow-[0_0_40px_hsl(var(--secondary)/0.4)] hover:shadow-[0_0_60px_hsl(var(--secondary)/0.6)] transition-shadow duration-500"
+            onClick={handleScrollToSection3}
           >
-            <Button
-              variant="premium"
-              size="lg"
-              className="px-12 py-6"
-              onClick={handleScrollToSection3}
-            >
-              SHOW ME HOW
-            </Button>
-          </motion.div>
+            SHOW ME HOW
+          </Button>
         </motion.div>
       </div>
     </section>
