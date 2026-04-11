@@ -11,6 +11,7 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
 import { Send } from "lucide-react";
 import sectionDivider from "@/assets/section-divider.jpg";
+// @ts-ignore
 import heroVideo from "/hero-butterfly.mp4.asset.json";
 
 const HeroSection = () => {
