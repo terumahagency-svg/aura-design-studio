@@ -12,7 +12,7 @@ import WhatsAppFAB from "@/components/WhatsAppFAB";
 import { Send } from "lucide-react";
 import sectionDivider from "@/assets/section-divider.jpg";
 // @ts-ignore
-import heroVideo from "/hero-butterfly.mp4.asset.json";
+const heroVideo = { url: "/__l5e/assets-v1/2fbdf5a8-8085-4514-83ad-c7c4dd4acdfe/hero-butterfly.mp4" };
 
 const HeroSection = () => {
   const handleScrollToSection3 = () => {
