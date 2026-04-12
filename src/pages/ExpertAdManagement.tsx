@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import PricingSection from "@/components/PricingSection";
 import { ArrowLeft } from "lucide-react";
+import solutionImg from "@/assets/solution-ad-management.png";
 
 const tiers = [
   {
@@ -69,8 +70,8 @@ const ExpertAdManagement = () => (
         </Link>
         <AnimatedSection>
           <div className="flex items-center gap-4 mb-8">
-            <div className="w-16 h-16 rounded-sm bg-deep-blue/10 border border-deep-blue/20 flex items-center justify-center">
-              <span className="font-heading text-xl font-semibold text-deep-blue">TT</span>
+            <div className="w-16 h-16 rounded-sm overflow-hidden">
+              <img src={solutionImg} alt="Terumah Targeted" loading="lazy" width={64} height={64} className="w-full h-full object-cover" />
             </div>
             <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">Terumah Targeted</p>
           </div>

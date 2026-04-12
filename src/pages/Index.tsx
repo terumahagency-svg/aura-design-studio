@@ -11,6 +11,10 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
 import { Send } from "lucide-react";
 import sectionDivider from "@/assets/section-divider.jpg";
+import solutionAdImg from "@/assets/solution-ad-management.png";
+import solutionEventsImg from "@/assets/solution-events.png";
+import solutionSocialImg from "@/assets/solution-social.png";
+import solutionVideoImg from "@/assets/solution-video-ads.png";
 // @ts-ignore
 const heroVideo = { url: "/__l5e/assets-v1/2fbdf5a8-8085-4514-83ad-c7c4dd4acdfe/hero-butterfly.mp4" };
 
@@ -196,7 +200,7 @@ const MissingPieceSection = () => {
     {
       title: "Expert Ad Management",
       brandName: "Terumah Targeted",
-      monogram: "TT",
+      image: solutionAdImg,
       description: "Strategic, data-driven ad campaigns that maximize every shilling of your budget.",
       path: "/expert-ad-management",
       accent: "deep-blue",
@@ -204,7 +208,7 @@ const MissingPieceSection = () => {
     {
       title: "Turn Events into Assets",
       brandName: "Terumah Sherehe",
-      monogram: "TS",
+      image: solutionEventsImg,
       description: "Transform live moments into evergreen content that keeps generating returns.",
       path: "/events-into-assets",
       accent: "secondary",
@@ -212,7 +216,7 @@ const MissingPieceSection = () => {
     {
       title: "Grow With Social Media",
       brandName: "The Terumah Social Flow",
-      monogram: "SF",
+      image: solutionSocialImg,
       description: "Support your sales team with high-quality leads through professional scripting and targeted social media campaigns.",
       path: "/social-media-sales-flow",
       accent: "light-blue",
@@ -220,7 +224,7 @@ const MissingPieceSection = () => {
     {
       title: "High-Converting Video Ads",
       brandName: "Almasi",
-      monogram: "AL",
+      image: solutionVideoImg,
       description: "Cinematic ads engineered to stop the scroll and drive action.",
       path: "/video-ads",
       accent: "secondary",
@@ -256,8 +260,8 @@ const MissingPieceSection = () => {
                 <div className={`absolute top-0 left-0 w-full h-[2px] bg-${item.accent} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
 
                 <div className="flex items-start gap-5 mb-6">
-                  <div className={`flex-shrink-0 w-14 h-14 rounded-sm bg-${item.accent}/10 border border-${item.accent}/20 flex items-center justify-center`}>
-                    <span className={`font-heading text-lg font-semibold text-${item.accent}`}>{item.monogram}</span>
+                  <div className="flex-shrink-0 w-14 h-14 rounded-sm overflow-hidden">
+                    <img src={item.image} alt={item.brandName} loading="lazy" width={56} height={56} className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-1">
                     <p className={`text-${item.accent} font-body text-[10px] tracking-[0.2em] uppercase font-semibold mb-1`}>{item.brandName}</p>
@@ -271,7 +275,7 @@ const MissingPieceSection = () => {
                   {item.description}
                 </p>
 
-                <span className="inline-flex items-center gap-2 px-5 py-2.5 font-body text-xs tracking-[0.2em] uppercase font-semibold rounded-full bg-background/10 backdrop-blur-md border border-foreground/20 text-foreground shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),0_0_12px_rgba(255,255,255,0.05)] group-hover:border-secondary/50 group-hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_16px_rgba(255,255,255,0.1)] transition-all duration-300">
+                <span className="inline-flex items-center gap-2 px-5 py-2.5 font-body text-xs tracking-[0.2em] uppercase font-semibold rounded-full bg-background/10 backdrop-blur-md border border-secondary/30 text-foreground shadow-[0_0_12px_hsl(var(--secondary)/0.25),0_0_4px_hsl(var(--secondary)/0.15)] group-hover:shadow-[0_0_20px_hsl(var(--secondary)/0.4),0_0_8px_hsl(var(--secondary)/0.25)] group-hover:border-secondary/60 transition-all duration-300">
                   Learn More
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-300">→</span>
                 </span>

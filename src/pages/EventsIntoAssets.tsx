@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import PricingSection from "@/components/PricingSection";
 import { ArrowLeft } from "lucide-react";
+import solutionImg from "@/assets/solution-events.png";
 
 const tiers = [
   {
@@ -55,8 +56,8 @@ const EventsIntoAssets = () => (
         </Link>
         <AnimatedSection>
           <div className="flex items-center gap-4 mb-8">
-            <div className="w-16 h-16 rounded-sm bg-secondary/10 border border-secondary/20 flex items-center justify-center">
-              <span className="font-heading text-xl font-semibold text-secondary">TS</span>
+            <div className="w-16 h-16 rounded-sm overflow-hidden">
+              <img src={solutionImg} alt="Terumah Sherehe" loading="lazy" width={64} height={64} className="w-full h-full object-cover" />
             </div>
             <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">Terumah Sherehe</p>
           </div>
