@@ -49,7 +49,7 @@ const HeroSection = () => {
           <br />
           TRANSFORM
           <br />
-          YOUR <span className="italic text-secondary font-light">BUSINESS</span>?
+          YOUR <span className="italic text-secondary font-light drop-shadow-[0_0_20px_hsl(var(--secondary)/0.6)]">BUSINESS</span>?
         </motion.h1>
 
         <motion.p
@@ -65,7 +65,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-secondary leading-none mb-10"
+          className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-secondary leading-none mb-10 drop-shadow-[0_0_24px_hsl(var(--secondary)/0.5)]"
         >
           <AnimatedCounter target={105000} duration={2.8} />
         </motion.p>
@@ -78,7 +78,7 @@ const HeroSection = () => {
           <Button
             variant="premium"
             size="lg"
-            className="px-16 py-7 text-sm shadow-[0_0_40px_hsl(var(--secondary)/0.4)] hover:shadow-[0_0_60px_hsl(var(--secondary)/0.6)] transition-shadow duration-500"
+            className="px-16 py-7 text-sm shadow-[0_0_30px_hsl(var(--secondary)/0.35),0_0_60px_hsl(var(--secondary)/0.2)] hover:shadow-[0_0_40px_hsl(var(--secondary)/0.5),0_0_80px_hsl(var(--secondary)/0.3)] transition-shadow duration-500"
             onClick={handleScrollToSection3}
           >
             SHOW ME HOW
