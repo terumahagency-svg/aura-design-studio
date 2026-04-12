@@ -49,7 +49,7 @@ const HeroSection = () => {
           <br />
           TRANSFORM
           <br />
-          YOUR <span className="italic text-secondary font-light drop-shadow-[0_0_30px_hsl(var(--secondary)/0.8)] [text-shadow:0_0_40px_hsl(var(--secondary)/0.6),0_0_80px_hsl(var(--secondary)/0.3)]">BUSINESS</span>?
+          YOUR <span className="italic text-secondary font-semibold drop-shadow-[0_0_40px_hsl(var(--secondary)/0.9)] [text-shadow:0_0_20px_hsl(var(--secondary)/0.8),0_0_60px_hsl(var(--secondary)/0.5),0_0_100px_hsl(var(--secondary)/0.3)]">BUSINESS</span>?
         </motion.h1>
 
         <motion.p
