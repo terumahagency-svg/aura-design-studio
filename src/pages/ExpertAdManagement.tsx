@@ -7,8 +7,8 @@ import solutionImg from "@/assets/solution-ad-management.png";
 const tiers = [
   {
     name: "Core",
-    tagline: "For businesses getting started with ads",
-    price: "KSH 20,000",
+    tagline: "Micro-businesses, solopreneurs and local shops starting with ads",
+    price: "KSh 24,000",
     period: "month",
     accent: "deep-blue",
     features: [
@@ -19,45 +19,48 @@ const tiers = [
       "Weekly optimization",
       "Monthly report",
       "Competitor Insight",
-      "The Lead-to-Sale Tracker",
-      "Separate Ad Spend: KSH 20,000/month (paid by client)",
+      'The "Lead-to-Sale" Tracker',
+      "Separate Ad Spend: KSh 20,000/month (paid by client)",
     ],
   },
   {
     name: "Pro",
-    tagline: "For growing brands ready to scale",
-    price: "KSH 35,000",
+    tagline: "Growing SMEs with proven product-market fit, ready to scale",
+    price: "KSh 42,000",
     period: "month",
     accent: "deep-blue",
     highlighted: true,
     features: [
+      "Everything in Core, plus:",
       "Two platforms max (Meta + TikTok/Google)",
       "Full pixel/API setup",
       "Landing Page/Instant Form Optimization",
       "Custom Audience Building",
       "A/B testing of audiences/creative",
       "Monthly performance call",
-      "Separate Ad Spend: KSH 60,000/month (paid by client)",
+      "Separate Ad Spend: KSh 60,000/month (paid by client)",
     ],
   },
   {
     name: "Elite",
-    tagline: "Full-service ad department replacement",
-    price: "KSH 60,000+",
+    tagline: "Established businesses and high-ticket sellers dominating their market",
+    price: "KSh 72,000",
     period: "month",
     accent: "deep-blue",
     features: [
+      "Everything in Core and Pro, plus:",
       "Omni-channel funnel management",
       "Lead Scoring & Management",
-      "Conversion Rate Optimization (CRO) Audit",
+      "Conversion Rate Optimization (CRO) Audit — finding the leaky bucket",
       "Retargeting campaigns",
       "CRM/Google Sheets lead integration",
       "Bi-weekly strategy calls",
       "Priority Support",
-      "Separate Ad Spend: KSH 150,000/month (paid by client)",
+      "Separate Ad Spend: KSh 150,000/month (paid by client)",
     ],
   },
 ];
+
 const ExpertAdManagement = () => (
   <main className="min-h-screen">
     <section className="relative py-32 md:py-44 px-6">
@@ -85,7 +88,7 @@ const ExpertAdManagement = () => (
       </div>
     </section>
 
-    <PricingSection service="Expert Ad Management" tiers={tiers} />
+    <PricingSection service="Terumah Targeted" tiers={tiers} />
   </main>
 );
 
