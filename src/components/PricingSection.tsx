@@ -25,9 +25,21 @@ interface PricingSectionProps {
   service: string;
   tiers: PricingTier[];
   addons?: PricingAddon[];
+  eyebrow?: string;
+  heading?: React.ReactNode;
+  description?: string;
+  muted?: boolean;
 }
 
-const PricingSection = ({ service, tiers, addons }: PricingSectionProps) => {
+const PricingSection = ({
+  service,
+  tiers,
+  addons,
+  eyebrow = "Pricing",
+  heading,
+  description,
+  muted = true,
+}: PricingSectionProps) => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedTier, setSelectedTier] = useState("");
 
