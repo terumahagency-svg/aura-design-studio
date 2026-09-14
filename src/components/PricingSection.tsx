@@ -50,19 +50,33 @@ const PricingSection = ({
 
   return (
     <>
-      <section className="py-24 md:py-32 px-6 bg-muted/50">
+      <section className={`py-20 md:py-28 px-6 ${muted ? "bg-muted/50" : ""}`}>
         <div className="max-w-6xl mx-auto">
           <AnimatedSection>
             <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold mb-6 text-center">
-              Pricing
+              {eyebrow}
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light leading-[1.15] mb-16 text-center max-w-2xl mx-auto">
-              Choose the tier that fits{" "}
-              <span className="italic text-secondary">your ambition</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light leading-[1.15] mb-6 text-center max-w-3xl mx-auto">
+              {heading ?? (
+                <>
+                  Choose the tier that fits{" "}
+                  <span className="italic text-secondary">your ambition</span>
+                </>
+              )}
             </h2>
+            {description && (
+              <p className="text-muted-foreground font-body text-base leading-relaxed text-center max-w-2xl mx-auto mb-14">
+                {description}
+              </p>
+            )}
+            {!description && <div className="mb-14" />}
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div
+            className={`grid gap-6 md:gap-8 ${
+              tiers.length === 2 ? "md:grid-cols-2 max-w-4xl mx-auto" : "md:grid-cols-3"
+            }`}
+          >
             {tiers.map((tier, i) => (
               <AnimatedSection key={tier.name} delay={i * 0.12}>
                 <motion.div
