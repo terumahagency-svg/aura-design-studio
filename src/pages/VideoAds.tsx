@@ -7,38 +7,42 @@ import solutionImg from "@/assets/solution-video-ads.png";
 const tiers = [
   {
     name: "Core",
-    tagline: "One high-impact video ad",
-    price: "KES 35,000",
+    tagline: "A direct-response social package designed for immediate conversion",
+    price: "KES 42,000",
     accent: "secondary",
     features: [
-      "Deliverables: 1 Concept, 1 Final Ad (Up to 30s)",
-      "Treatment & Scripting: 1 hook-focused script optimized for social media",
-      "Editing: Trendy captions, licensed music, basic color correction",
+      "Deliverables: 1 Main Ad (up to 30s) + 2 Alternative Hooks for Meta/TikTok A/B testing, delivered in 9:16 and 1:1",
+      "Treatment & Scripting: 1 hook-focused script optimized for social media engagement",
+      "Production: 2-hour shoot, single-man crew (mirrorless setup), natural lighting + on-camera bounce",
+      "Editing: Trendy captions, licensed royalty-free music, standard C-Log3 to Rec.709 colour correction",
+      "Includes 1 round of revisions",
     ],
   },
   {
     name: "Pro",
-    tagline: "Best for SMEs launching a monthly campaign",
-    price: "KES 65,000",
+    tagline: "A robust multi-platform campaign package for SMEs",
+    price: "KES 78,000",
     accent: "secondary",
     highlighted: true,
     features: [
-      "Deliverables: 2 Creative Concepts, 1 Main Ad (60s) + 2 Cut-downs (15s Hooks)",
-      "Treatment & Scripting: Professional scripting with storyboards for both concepts",
-      "Production: Half-day shoot (4–5 hours), 2-person crew, professional lighting & audio kit",
-      "Editing: Advanced color grading, sound design, and motion graphics (logo/CTA)",
+      "Deliverables: 2 Creative Concepts — 1 Main Ad (60s) + 2 Cut-downs (15s hooks), delivered in 16:9, 9:16 and 1:1",
+      "Treatment & Scripting: Professional scripting, storyboarding for both concepts, and a pre-production call",
+      "Production: Half-day shoot (4–5 hours), 2-person crew, professional lighting & wireless audio kit",
+      "Editing: Advanced C-Log3 colour grading, basic sound design, motion graphics (animated logo/CTA)",
+      "Includes 2 rounds of revisions",
     ],
   },
   {
     name: "Elite",
-    tagline: "Full cinematic production suite",
-    price: "KES 150,000",
+    tagline: "A cinematic brand film package for serious corporate entities",
+    price: "KES 180,000",
     accent: "secondary",
     features: [
-      "Deliverables: 3 Creative Concepts, 1 Cinematic Film (2 mins) + 4 Social Ads (Mix of lengths)",
-      "Treatment & Scripting: Full creative direction, scouting, and professional copy",
-      "Production: Full-day shoot (8–10 hours), 3-person crew (Director, DP, Sound), 4K Cinema gear + Drone shots",
-      "Editing: Premium post-production, multi-platform optimization, and professional Voice-over",
+      "Deliverables: 3 Creative Concepts — 1 Cinematic Film (2 mins) + 4 Social Ads (mix of lengths)",
+      "Treatment & Scripting: Full creative direction, location scouting, professional copywriting, 1-hour ad distribution strategy call",
+      "Production: Full-day shoot (8–10 hours), 3-person crew (Director, DP, Sound/Grip), 4K cinema gear + drone shots where permitted",
+      "Editing: Premium post-production in DaVinci Resolve, multi-platform optimization, professional local voice-over",
+      "Includes 3 rounds of revisions",
     ],
   },
 ];
@@ -143,6 +147,28 @@ const VideoAds = () => (
             </AnimatedSection>
           ))}
         </div>
+      </div>
+    </section>
+
+    {/* Standard terms */}
+    <section className="pb-24 px-6">
+      <div className="max-w-4xl mx-auto">
+        <AnimatedSection>
+          <div className="border border-border bg-card/50 p-6 md:p-8">
+            <h3 className="font-heading text-lg font-medium mb-3 text-foreground">
+              Standard terms, disclaimers & variable costs
+            </h3>
+            <p className="font-body text-sm text-muted-foreground leading-relaxed">
+              Almasi base rates cover creative direction, standard Terumah Agency crew, in-house
+              equipment and post-production. Rates do not include location hiring fees, KCAA drone
+              permits for restricted zones, on-screen acting talent or models, specialized props,
+              wardrobe, or premium celebrity voiceovers. Where your project requires these, they are
+              quoted separately as variable costs and must be approved before production. Additional
+              editing revisions beyond the stated package limit are billed at KES 5,000 per hour.
+              RAW footage is not included but can be purchased via a 25% buy-out fee.
+            </p>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   </main>
