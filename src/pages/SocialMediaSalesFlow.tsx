@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
-import AnimatedSection from "@/components/AnimatedSection";
 import PricingSection from "@/components/PricingSection";
-import { ArrowLeft } from "lucide-react";
+import ServiceHero from "@/components/ServiceHero";
 import solutionImg from "@/assets/solution-social.png";
 
 const shootingTiers = [
@@ -140,30 +138,12 @@ const completeTiers = [
 
 const SocialMediaSalesFlow = () => (
   <main className="min-h-screen">
-    <section className="relative py-32 md:py-44 px-6">
-      <div className="absolute inset-0">
-        <div className="w-full h-full bg-gradient-to-br from-light-blue/20 via-deep-blue/10 to-background" />
-      </div>
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground font-body text-sm tracking-wide hover:text-secondary transition-colors mb-12">
-          <ArrowLeft className="w-4 h-4" /> Back to Home
-        </Link>
-        <AnimatedSection>
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-16 h-16 rounded-sm overflow-hidden">
-              <img src={solutionImg} alt="The Terumah Social Flow" loading="lazy" width={64} height={64} className="w-full h-full object-cover" />
-            </div>
-            <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">The Terumah Social Flow</p>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-heading font-light leading-[1.1] mb-8">
-            The Terumah <span className="italic text-secondary">Social Flow</span>
-          </h1>
-          <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl">
-            Support your sales department with a steady stream of high-quality leads generated through professional scripting and targeted social media campaigns. Choose only the shoot, the finished content, or the complete revenue system.
-          </p>
-        </AnimatedSection>
-      </div>
-    </section>
+    <ServiceHero
+      brand="The Terumah Social Flow"
+      title={<>Content built to <span className="italic text-secondary">move people.</span></>}
+      description="Support your sales department with high-quality leads through professional scripting and targeted social media campaigns—whether you need the shoot, finished content or the complete revenue system."
+      image={solutionImg}
+    />
 
     <PricingSection
       service="The Terumah Social Flow"

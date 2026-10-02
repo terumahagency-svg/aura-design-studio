@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
-import AnimatedSection from "@/components/AnimatedSection";
 import PricingSection from "@/components/PricingSection";
-import { ArrowLeft } from "lucide-react";
+import ServiceHero from "@/components/ServiceHero";
 import solutionImg from "@/assets/solution-events.png";
 
 const corporateTiers = [
@@ -79,30 +77,12 @@ const milestoneTiers = [
 
 const EventsIntoAssets = () => (
   <main className="min-h-screen">
-    <section className="relative py-32 md:py-44 px-6">
-      <div className="absolute inset-0">
-        <div className="w-full h-full bg-gradient-to-br from-secondary/20 via-accent/10 to-background" />
-      </div>
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground font-body text-sm tracking-wide hover:text-secondary transition-colors mb-12">
-          <ArrowLeft className="w-4 h-4" /> Back to Home
-        </Link>
-        <AnimatedSection>
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-16 h-16 rounded-sm overflow-hidden">
-              <img src={solutionImg} alt="Terumah Sherehe" loading="lazy" width={64} height={64} className="w-full h-full object-cover" />
-            </div>
-            <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">Terumah Sherehe</p>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-heading font-light leading-[1.1] mb-8">
-            Turn Events into <span className="italic text-secondary">Assets</span>
-          </h1>
-          <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl">
-            The Terumah Sherehe provides the professional-grade video coverage needed to turn one-time gatherings into permanent tools for business growth and industry dominance.
-          </p>
-        </AnimatedSection>
-      </div>
-    </section>
+    <ServiceHero
+      brand="Terumah Sherehe"
+      title={<>Turn events into <span className="italic text-secondary">lasting assets.</span></>}
+      description="Professional-grade coverage that transforms one-time gatherings into permanent tools for growth, connection and industry authority."
+      image={solutionImg}
+    />
 
     <PricingSection
       service="Terumah Sherehe"

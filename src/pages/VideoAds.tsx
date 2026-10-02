@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import PricingSection from "@/components/PricingSection";
-import { ArrowLeft } from "lucide-react";
+import ServiceHero from "@/components/ServiceHero";
 import solutionImg from "@/assets/solution-video-ads.png";
 
 const tiers = [
@@ -69,37 +68,12 @@ const addons = [
 
 const VideoAds = () => (
   <main className="min-h-screen">
-    <section className="relative py-32 md:py-44 px-6">
-      <div className="absolute inset-0">
-        <div className="w-full h-full bg-gradient-to-br from-secondary/20 via-deep-blue/10 to-background" />
-      </div>
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <Link
-          to="/"
-          className="inline-flex items-center gap-2 text-muted-foreground font-body text-sm tracking-wide hover:text-secondary transition-colors mb-12"
-        >
-          <ArrowLeft className="w-4 h-4" /> Back to Home
-        </Link>
-        <AnimatedSection>
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-16 h-16 rounded-sm overflow-hidden">
-              <img src={solutionImg} alt="Almasi by Terumah" loading="lazy" width={64} height={64} className="w-full h-full object-cover" />
-            </div>
-            <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold">
-              Almasi by Terumah
-            </p>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-heading font-light leading-[1.1] mb-8">
-            Almasi by <span className="italic text-secondary">Terumah</span>
-          </h1>
-          <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl">
-            Elevate your marketing ROI with high-converting video ads crafted
-            with expert scripting and data-driven hooks tailored to your business
-            objectives.
-          </p>
-        </AnimatedSection>
-      </div>
-    </section>
+    <ServiceHero
+      brand="Almasi by Terumah"
+      title={<>Video ads with <span className="italic text-secondary">stopping power.</span></>}
+      description="Elevate your marketing ROI with high-converting video ads shaped by expert scripting, data-driven hooks and premium production."
+      image={solutionImg}
+    />
 
     {/* Bundling disclaimer */}
     <section className="px-6">

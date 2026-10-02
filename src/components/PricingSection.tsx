@@ -50,13 +50,13 @@ const PricingSection = ({
 
   return (
     <>
-      <section className={`py-20 md:py-28 px-6 ${muted ? "bg-muted/50" : ""}`}>
-        <div className="max-w-6xl mx-auto">
+      <section className={`px-6 py-24 md:py-32 ${muted ? "bg-muted" : "bg-background"}`}>
+        <div className="mx-auto max-w-7xl">
           <AnimatedSection>
-            <p className="text-secondary tracking-[0.25em] uppercase text-xs font-body font-semibold mb-6 text-center">
+            <p className="brand-eyebrow mb-5 text-center text-secondary">
               {eyebrow}
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light leading-[1.15] mb-6 text-center max-w-3xl mx-auto">
+            <h2 className="mx-auto mb-6 max-w-3xl text-center text-4xl font-heading font-semibold leading-[1.05] md:text-6xl">
               {heading ?? (
                 <>
                   Choose the tier that fits{" "}
@@ -65,7 +65,7 @@ const PricingSection = ({
               )}
             </h2>
             {description && (
-              <p className="text-muted-foreground font-body text-base leading-relaxed text-center max-w-2xl mx-auto mb-14">
+              <p className="mx-auto mb-16 max-w-2xl text-center font-body text-base leading-7 text-muted-foreground">
                 {description}
               </p>
             )}
@@ -73,7 +73,7 @@ const PricingSection = ({
           </AnimatedSection>
 
           <div
-            className={`grid gap-6 md:gap-8 ${
+            className={`grid gap-px overflow-hidden border border-border bg-border ${
               tiers.length === 2 ? "md:grid-cols-2 max-w-4xl mx-auto" : "md:grid-cols-3"
             }`}
           >
@@ -82,37 +82,37 @@ const PricingSection = ({
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ type: "spring", damping: 20, stiffness: 300 }}
-                  className={`relative flex flex-col h-full border bg-card p-8 md:p-10 transition-colors duration-500 ${
+                  className={`relative flex h-full flex-col bg-card p-8 transition-colors duration-500 md:p-10 ${
                     tier.highlighted
-                      ? "border-secondary shadow-[0_0_40px_-12px_hsl(var(--secondary)/0.25)]"
-                      : "border-border hover:border-secondary/50"
+                      ? "bg-deep-blue text-deep-blue-foreground"
+                      : "hover:bg-muted"
                   }`}
                 >
                   {tier.highlighted && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="bg-secondary text-secondary-foreground font-body text-[10px] tracking-[0.2em] uppercase font-semibold px-4 py-1">
+                      <span className="bg-secondary px-4 py-1 font-body text-[10px] font-semibold uppercase text-secondary-foreground">
                         Most Popular
                       </span>
                     </div>
                   )}
 
                   <div className="mb-8">
-                    <h3 className="text-xl font-heading font-medium mb-1">{tier.name}</h3>
-                    <p className="text-muted-foreground font-body text-sm">{tier.tagline}</p>
+                    <h3 className="mb-2 text-2xl font-heading font-semibold">{tier.name}</h3>
+                    <p className={`font-body text-sm leading-6 ${tier.highlighted ? "text-deep-blue-foreground/70" : "text-muted-foreground"}`}>{tier.tagline}</p>
                   </div>
 
                   <div className="mb-8">
-                    <span className="text-4xl md:text-5xl font-heading font-light">{tier.price}</span>
+                    <span className="text-4xl font-heading font-semibold md:text-5xl">{tier.price}</span>
                     {tier.period && (
-                      <span className="text-muted-foreground font-body text-sm ml-1">/{tier.period}</span>
+                      <span className={`ml-1 font-body text-sm ${tier.highlighted ? "text-deep-blue-foreground/65" : "text-muted-foreground"}`}>/{tier.period}</span>
                     )}
                   </div>
 
                   <ul className="space-y-3 mb-10 flex-1">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <Check className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground font-body text-sm leading-relaxed">{feature}</span>
+                        <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-secondary" />
+                        <span className={`font-body text-sm leading-relaxed ${tier.highlighted ? "text-deep-blue-foreground/75" : "text-muted-foreground"}`}>{feature}</span>
                       </li>
                     ))}
                   </ul>
