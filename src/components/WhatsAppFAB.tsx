@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
@@ -40,8 +40,7 @@ const WhatsAppFAB = ({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.5, y: 20 }}
           transition={{ type: "spring", damping: 20, stiffness: 300 }}
-          className="fixed bottom-8 right-8 z-50 flex items-center gap-3 bg-[#25D366] text-primary-foreground px-5 py-3.5 rounded-full shadow-lg hover:shadow-xl font-body text-sm font-semibold tracking-wide"
-          style={{ boxShadow: "0 8px 30px rgba(37, 211, 102, 0.35)" }}
+          className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-deep-blue px-5 py-3.5 font-body text-sm font-semibold text-deep-blue-foreground shadow-xl transition-colors hover:bg-light-blue md:bottom-8 md:right-8"
         >
           <MessageCircle className="w-5 h-5" />
           <span className="hidden sm:inline">Chat with us</span>
