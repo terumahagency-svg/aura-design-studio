@@ -16,7 +16,7 @@ const BrandHeader = ({ overlay = false }: BrandHeaderProps) => (
   >
     <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
       <Link to="/" aria-label="Terumah Agency home" className="shrink-0">
-        <img src={logo.url} alt="Terumah Agency" className="h-14 w-auto object-contain" />
+        <img src={logo.url} alt="Terumah Agency" className="h-12 w-auto object-contain md:h-14" />
       </Link>
       <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
         <Link className="brand-nav-link" to="/#about-terumah">About</Link>

@@ -29,7 +29,7 @@ const HeroSection = () => (
     <div className="absolute inset-0 bg-gradient-to-r from-deep-blue via-deep-blue/90 to-deep-blue/25" />
     <div className="absolute inset-0 bg-gradient-to-t from-foreground/55 via-transparent to-foreground/20" />
 
-    <div className="relative mx-auto w-full max-w-7xl px-6 pb-24 pt-32 lg:px-10">
+    <div className="relative mx-auto w-full max-w-7xl px-6 pb-12 pt-28 md:pb-20 md:pt-32 lg:px-10">
       <div className="max-w-4xl">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -43,7 +43,7 @@ const HeroSection = () => (
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-3xl text-6xl font-heading font-semibold leading-[0.9] sm:text-7xl md:text-8xl lg:text-9xl"
+          className="max-w-3xl text-5xl font-heading font-semibold leading-[0.92] sm:text-6xl md:text-8xl lg:text-9xl"
         >
           Ready to transform your <span className="italic text-secondary">business?</span>
         </motion.h1>
@@ -51,7 +51,7 @@ const HeroSection = () => (
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-8 max-w-xl font-body text-base leading-7 text-deep-blue-foreground/75 md:text-lg"
+          className="mt-6 max-w-xl font-body text-sm leading-6 text-deep-blue-foreground/75 md:mt-8 md:text-lg md:leading-7"
         >
           We unite data-driven strategy and professional storytelling to turn attention into measurable business growth.
         </motion.p>
@@ -59,7 +59,7 @@ const HeroSection = () => (
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1 }}
-          className="mt-10 flex flex-wrap items-center gap-6"
+          className="mt-7 flex flex-wrap items-center gap-5 md:mt-10 md:gap-6"
         >
           <Button variant="premium" size="lg" className="h-14 px-9" asChild>
             <a href="#section-3">Show me how <ArrowRight /></a>
