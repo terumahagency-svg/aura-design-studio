@@ -11,8 +11,6 @@ import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import BrandHeader from "@/components/BrandHeader";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
-import logo from "@/assets/terumah-logo.png.asset.json";
-import monogram from "@/assets/terumah-monogram.png.asset.json";
 import solutionAdImg from "@/assets/solution-ad-management.png";
 import solutionEventsImg from "@/assets/solution-events.png";
 import solutionSocialImg from "@/assets/solution-social.png";
@@ -98,7 +96,7 @@ const AboutSection = () => (
 
         <AnimatedSection delay={0.15}>
           <div className="relative overflow-hidden bg-secondary p-8 text-secondary-foreground sm:p-10 md:p-12">
-            <img src={monogram.url} alt="" className="absolute -bottom-20 -right-16 h-72 w-72 object-contain opacity-10" />
+            <img src="/favicon.png" alt="" className="absolute -bottom-20 -right-16 h-72 w-72 object-contain opacity-10" />
             <p className="brand-eyebrow text-secondary-foreground/65">The meaning behind our name</p>
             <p className="mt-6 font-heading text-5xl font-semibold md:text-6xl">תְּרוּמָה</p>
             <p className="mt-4 max-w-lg font-body text-base leading-7 text-secondary-foreground/80">
@@ -271,7 +269,10 @@ const ContactFooter = () => {
 
       <div className="border-t border-deep-blue-foreground/15 px-6 py-8 lg:px-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 sm:flex-row">
-          <img src={logo.url} alt="Terumah Agency" className="h-16 w-16 bg-background object-contain" />
+          <div className="flex items-center gap-3">
+            <img src="/favicon.png" alt="" className="h-14 w-14 bg-background object-contain" />
+            <div><p className="font-heading text-xl font-semibold leading-none">TERUMAH</p><p className="mt-1 font-body text-[9px] font-bold uppercase text-light-blue">Agency</p></div>
+          </div>
           <p className="font-body text-xs text-deep-blue-foreground/45">© {new Date().getFullYear()} Terumah Agency. All rights reserved.</p>
         </div>
       </div>

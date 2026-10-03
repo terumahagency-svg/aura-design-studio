@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import BrandHeader from "@/components/BrandHeader";
-import monogram from "@/assets/terumah-monogram.png.asset.json";
 
 interface ServiceHeroProps {
   brand: string;
@@ -20,7 +19,7 @@ const ServiceHero = ({ brand, title, description, image }: ServiceHeroProps) => 
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-deep-blue via-deep-blue/95 to-deep-blue/50" />
       <img
-        src={monogram.url}
+        src="/favicon.png"
         alt=""
         className="absolute -bottom-40 right-0 h-[34rem] w-[34rem] object-contain opacity-[0.08]"
       />
