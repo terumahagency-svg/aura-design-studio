@@ -49,7 +49,7 @@ const tiers = [
       "Everything in Core and Pro, plus:",
       "Omni-channel funnel management",
       "Lead Scoring & Management",
-      "Conversion Rate Optimization (CRO) Audit — finding the leaky bucket",
+      "Conversion Rate Optimization (CRO) Audit, finding the leaky bucket",
       "Retargeting campaigns",
       "CRM/Google Sheets lead integration",
       "Bi-weekly strategy calls",
