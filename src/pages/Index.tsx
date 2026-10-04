@@ -90,7 +90,7 @@ const AboutSection = () => (
             Our best work is an <span className="italic text-secondary">offering.</span>
           </h2>
           <p className="mt-8 max-w-lg font-body text-base leading-8 text-muted-foreground">
-            Founded on Christian values of integrity, stewardship and excellence, we treat your marketing budget as a sacred trust—not simply another media spend.
+            Founded on Christian values of integrity, stewardship and excellence, we treat your marketing budget as a sacred trust, not simply another media spend.
           </p>
         </AnimatedSection>
 
@@ -105,6 +105,13 @@ const AboutSection = () => (
           </div>
         </AnimatedSection>
       </div>
+
+      <AnimatedSection delay={0.18} className="mt-16 border-l-4 border-light-blue bg-deep-blue px-8 py-10 text-deep-blue-foreground md:px-12 md:py-12">
+        <p className="brand-eyebrow text-light-blue">Our mission</p>
+        <p className="mt-5 max-w-5xl font-heading text-3xl font-medium leading-snug md:text-4xl">
+          Our mission is to make heaven here on earth by changing the lives of business owners, making their businesses profitable, and partnering with God in His mission of spreading the Gospel with excellence in digital marketing and video production.
+        </p>
+      </AnimatedSection>
 
       <AnimatedSection delay={0.2} className="mt-20">
         <div className="grid border-y border-border sm:grid-cols-2 lg:grid-cols-4">
@@ -125,7 +132,7 @@ const AboutSection = () => (
 
       <AnimatedSection delay={0.25} className="mt-14 max-w-4xl">
         <p className="font-heading text-3xl font-medium leading-snug text-deep-blue md:text-4xl">
-          We solve the “leaky bucket” by pairing data-driven strategy with professional storytelling—so your message reaches the right hearts and minds.
+          We solve the “leaky bucket” by pairing data-driven strategy with professional storytelling, so your message reaches the right hearts and minds.
         </p>
       </AnimatedSection>
     </div>

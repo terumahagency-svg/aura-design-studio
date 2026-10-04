@@ -18,7 +18,7 @@ const shootingTiers = [
   },
   {
     name: "Shooting Pro",
-    tagline: "Best value — 12 raw files with hook writing",
+    tagline: "Best value, 12 raw files with hook writing",
     price: "KSh 35,000",
     accent: "light-blue",
     highlighted: true,
@@ -63,7 +63,7 @@ const contentTiers = [
   },
   {
     name: "Content Pro",
-    tagline: "Best value — 12 fully edited videos (~KSh 6,250 per video)",
+    tagline: "Best value, 12 fully edited videos (~KSh 6,250 per video)",
     price: "KSh 75,000",
     accent: "light-blue",
     highlighted: true,
@@ -107,7 +107,7 @@ const completeTiers = [
   },
   {
     name: "Complete Pro",
-    tagline: "Best value — 12 videos + cross-platform ads + basic automation",
+    tagline: "Best value, 12 videos + cross-platform ads + basic automation",
     price: "KSh 160,000",
     accent: "light-blue",
     highlighted: true,
@@ -141,7 +141,7 @@ const SocialMediaSalesFlow = () => (
     <ServiceHero
       brand="The Terumah Social Flow"
       title={<>Content built to <span className="italic text-secondary">move people.</span></>}
-      description="Support your sales department with high-quality leads through professional scripting and targeted social media campaigns—whether you need the shoot, finished content or the complete revenue system."
+      description="Support your sales department with high-quality leads through professional scripting and targeted social media campaigns, whether you need the shoot, finished content or the complete revenue system."
       image={solutionImg}
     />
 

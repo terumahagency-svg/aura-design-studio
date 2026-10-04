@@ -92,7 +92,7 @@ const LeadCaptureDialog = ({ open, onOpenChange, service, tier, addons }: LeadCa
       <DialogContent className="sm:max-w-lg bg-card border-border max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="font-heading text-2xl font-light">
-            Get Started — <span className="italic text-secondary">{tier}</span>
+            Get Started, <span className="italic text-secondary">{tier}</span>
           </DialogTitle>
           <DialogDescription className="font-body text-sm text-muted-foreground">
             {service} • {tier} Tier

@@ -24,7 +24,7 @@ const tiers = [
     accent: "secondary",
     highlighted: true,
     features: [
-      "Deliverables: 2 Creative Concepts — 1 Main Ad (60s) + 2 Cut-downs (15s hooks), delivered in 16:9, 9:16 and 1:1",
+      "Deliverables: 2 Creative Concepts; 1 Main Ad (60s) + 2 Cut-downs (15s hooks), delivered in 16:9, 9:16 and 1:1",
       "Treatment & Scripting: Professional scripting, storyboarding for both concepts, and a pre-production call",
       "Production: Half-day shoot (4–5 hours), 2-person crew, professional lighting & wireless audio kit",
       "Editing: Advanced C-Log3 colour grading, basic sound design, motion graphics (animated logo/CTA)",
@@ -37,7 +37,7 @@ const tiers = [
     price: "KES 180,000",
     accent: "secondary",
     features: [
-      "Deliverables: 3 Creative Concepts — 1 Cinematic Film (2 mins) + 4 Social Ads (mix of lengths)",
+      "Deliverables: 3 Creative Concepts; 1 Cinematic Film (2 mins) + 4 Social Ads (mix of lengths)",
       "Treatment & Scripting: Full creative direction, location scouting, professional copywriting, 1-hour ad distribution strategy call",
       "Production: Full-day shoot (8–10 hours), 3-person crew (Director, DP, Sound/Grip), 4K cinema gear + drone shots where permitted",
       "Editing: Premium post-production in DaVinci Resolve, multi-platform optimization, professional local voice-over",
@@ -51,7 +51,7 @@ const addons = [
     id: "ab-test",
     label: "A/B Test Variations (+ KES 15,000)",
     description:
-      "2 versions of the same ad with different Hooks (first 3 seconds) and CTAs — proven to boost Meta ad ROI.",
+      "2 versions of the same ad with different Hooks (first 3 seconds) and CTAs, proven to boost Meta ad ROI.",
   },
   {
     id: "raw-footage",

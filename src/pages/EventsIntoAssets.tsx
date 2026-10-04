@@ -27,7 +27,7 @@ const corporateTiers = [
       "1 x Corporate Wrap Video (3 mins): soundbites from speakers and high-quality b-roll",
       "5 x Interview/Vox-Pop Videos with attendees or VIPs",
       '10 x Social Media "Snacks": short vertical clips optimized for mobile',
-      "Value: legacy content — testimonials for your next event and a portfolio piece for your website",
+      "Value: legacy content, testimonials for your next event and a portfolio piece for your website",
     ],
   },
   {
@@ -52,7 +52,7 @@ const milestoneTiers = [
     price: "KSh 28,000",
     accent: "secondary",
     features: [
-      "1 Videographer | Up to 3 hours of coverage (strictly personal events — no corporate branding)",
+      "1 Videographer | Up to 3 hours of coverage (strictly personal events; no corporate branding)",
       "1 x Aesthetic Highlight Reel (60–90s)",
       "3 x Vertical Reels (15s) pre-edited for Instagram, TikTok and WhatsApp Status",
       "Mini documentary of the event (8–15 mins) as a keepsake",
@@ -70,7 +70,7 @@ const milestoneTiers = [
       "1 x Cinematic Trailer (3–5 mins): the emotional core of the event, highly stylized",
       "1 x Full Documentary Cut (40–60 mins): complete ceremony, speeches or awards in sequence",
       "1 x 60s Teaser delivered within 48 hours for immediate social sharing",
-      "Value: complete emotional legacy preservation — no vow, speech or milestone missed",
+      "Value: complete emotional legacy preservation; no vow, speech or milestone missed",
     ],
   },
 ];
@@ -93,7 +93,7 @@ const EventsIntoAssets = () => (
           Coverage that works for <span className="italic text-secondary">your business</span>
         </>
       }
-      description="Conferences, launches, AGMs and summits — captured as assets you can market with long after the day ends."
+      description="Conferences, launches, AGMs and summits, captured as assets you can market with long after the day ends."
     />
 
     <PricingSection
